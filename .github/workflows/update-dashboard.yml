@@ -1,0 +1,37 @@
+name: Update dashboard
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "repos.json"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Collect + build
+        env:
+          GH_TOKEN: ${{ secrets.DASHBOARD_PAT }}
+        run: npm run refresh
+
+      - name: Commit updated dashboard
+        run: |
+          git config user.name "status-dashboard-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs data
+          git diff --staged --quiet || git commit -m "chore: atualiza painel"
+          git push

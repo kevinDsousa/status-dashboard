@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-08-10T23:56:43.506Z",
+  "repos": [
+    {
+      "owner": "kevinDsousa",
+      "name": "Servora",
+      "openIssues": 30,
+      "closedIssues": 24,
+      "openPRs": 0,
+      "closedRatio": 44,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 42,
+          "title": "[BACKEND] Observabilidade — Estrutura de logs (Log4j2, correlação, AOP e mascaramento)",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Servora/issues/42"
+        },
+        {
+          "number": 49,
+          "title": "[TESTES] Logging — Casos de teste do aspecto, mascaramento e correlação",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Servora/issues/49"
+        },
+        {
+          "number": 48,
+          "title": "[BACKEND] Logging — Eventos de segurança em ApiKeyFilter e ApiRateLimitInterceptor",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Servora/issues/48"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "Pite-Backend",
+      "openIssues": 69,
+      "closedIssues": 6,
+      "openPRs": 0,
+      "closedRatio": 8,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 8,
+          "title": "[INFRA] Profiles dev/prod e variáveis de ambiente",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/8"
+        },
+        {
+          "number": 7,
+          "title": "[INFRA] Exception handling global + formato de erro padrão",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/7"
+        },
+        {
+          "number": 6,
+          "title": "[INFRA] Client MinIO + buckets iniciais",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/6"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "Pite-Frontend",
+      "openIssues": 43,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": 0,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 40,
+          "title": "[SETTINGS] Configurações",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/40"
+        },
+        {
+          "number": 43,
+          "title": "[SETTINGS] Preferências de notificação",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
+        },
+        {
+          "number": 42,
+          "title": "[SETTINGS] Integrações conectadas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "Pite-Mobile",
+      "openIssues": 38,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": 0,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 34,
+          "title": "[PROFILE] Perfil do atleta",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/34"
+        },
+        {
+          "number": 38,
+          "title": "[PROFILE] Atalho para gerenciar dispositivos conectados",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/38"
+        },
+        {
+          "number": 37,
+          "title": "[PROFILE] Vincular/contratar assessoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/37"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "reserva_facil_api",
+      "openIssues": 40,
+      "closedIssues": 41,
+      "openPRs": 0,
+      "closedRatio": 51,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 25,
+          "title": "[Dívida técnica] Aumentar cobertura de testes unitários",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/25"
+        },
+        {
+          "number": 31,
+          "title": "Upload de logo da empresa",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/31"
+        },
+        {
+          "number": 17,
+          "title": "Reembolso automático ao cancelar reserva paga",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/17"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "reserva-facil-front",
+      "openIssues": 30,
+      "closedIssues": 1,
+      "openPRs": 0,
+      "closedRatio": 3,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 1,
+          "title": "[Dívida técnica] Reescrever README do frontend",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/1"
+        },
+        {
+          "number": 31,
+          "title": "[REFATORAÇÃO] Migrar *ngFor legado remanescente para @for",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/31"
+        },
+        {
+          "number": 30,
+          "title": "[REFATORAÇÃO] Adicionar ChangeDetectionStrategy.OnPush nos componentes",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/30"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "IntegraFlux-Api",
+      "openIssues": 14,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": 0,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 14,
+          "title": "[Dívida técnica] JwtService reprocessa/reassina o token várias vezes por requisição",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/14"
+        },
+        {
+          "number": 13,
+          "title": "[Dívida técnica] GlobalExceptionHandler não trata exceções comuns do Spring MVC (caem como 500 genérico)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/13"
+        },
+        {
+          "number": 12,
+          "title": "[Dívida técnica] TenantContextHolder usa InheritableThreadLocal, incompatível com o pool @Async da Auditoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/12"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "IntegraFlux-Front",
+      "openIssues": 15,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": 0,
+      "latestRelease": null,
+      "recentIssues": [
+        {
+          "number": 15,
+          "title": "[Segurança] Avaliar armazenamento de access/refresh token em localStorage (risco de XSS)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/15"
+        },
+        {
+          "number": 14,
+          "title": "[Dívida técnica] Rotação de refresh token não é segura em múltiplas abas simultâneas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/14"
+        },
+        {
+          "number": 13,
+          "title": "[Dívida técnica] apiClient não desloga o usuário em 401 que não seja TOKEN_EXPIRED",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/13"
+        }
+      ]
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "ImobiSim_Backend",
+      "openIssues": 0,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": null,
+      "latestRelease": null,
+      "recentIssues": []
+    },
+    {
+      "owner": "kevinDsousa",
+      "name": "ImobiSim",
+      "openIssues": 0,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": null,
+      "latestRelease": null,
+      "recentIssues": []
+    }
+  ]
+}

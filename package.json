@@ -1,0 +1,10 @@
+{
+  "name": "status-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "build": "node scripts/build.mjs",
+    "refresh": "npm run collect && npm run build"
+  }
+}

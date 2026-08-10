@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Status dos projetos</title>
+<style>
+  :root {
+    --bg: #F4F7F6; --surface: #FFFFFF; --surface-2: #EBF0EF; --border: #D8E1DF;
+    --text-primary: #142322; --text-secondary: #53645F; --text-muted: #7C8B87;
+    --accent: #0E7C74; --accent-soft: #E3F2EF;
+    --good: #1E8E5A; --good-soft: #E4F5EC;
+    --warning: #9C6B12; --warning-soft: #FBF0DD;
+    --critical: #B03A22; --critical-soft: #FBE7E1;
+    --shadow: 0 1px 2px rgba(20,35,34,.06), 0 1px 1px rgba(20,35,34,.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0A1413; --surface: #101B1A; --surface-2: #172423; --border: #263635;
+      --text-primary: #E8EFED; --text-secondary: #A9BAB6; --text-muted: #79908C;
+      --accent: #3FC2B7; --accent-soft: rgba(63,194,183,.14);
+      --good: #35C77E; --good-soft: rgba(53,199,126,.14);
+      --warning: #E3AE4A; --warning-soft: rgba(227,174,74,.14);
+      --critical: #E56A50; --critical-soft: rgba(229,106,80,.14);
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0A1413; --surface: #101B1A; --surface-2: #172423; --border: #263635;
+    --text-primary: #E8EFED; --text-secondary: #A9BAB6; --text-muted: #79908C;
+    --accent: #3FC2B7; --accent-soft: rgba(63,194,183,.14);
+    --good: #35C77E; --good-soft: rgba(53,199,126,.14);
+    --warning: #E3AE4A; --warning-soft: rgba(227,174,74,.14);
+    --critical: #E56A50; --critical-soft: rgba(229,106,80,.14);
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2);
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text-primary);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; padding: 40px 20px 80px; line-height: 1.5;
+  }
+  .page { max-width: 900px; margin: 0 auto; }
+  header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  h1 { font-size: 22px; margin: 0; }
+  .generated { font-size: 12px; color: var(--text-muted); font-family: ui-monospace, monospace; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+  .stat-tile { background: var(--surface-2); border-radius: 10px; padding: 14px 16px; }
+  .stat-tile .num { font-family: ui-monospace, monospace; font-size: 24px; font-weight: 600; display: block; }
+  .stat-tile .label { font-size: 12px; color: var(--text-secondary); margin-top: 4px; display: block; }
+  .stat-tile.good .num { color: var(--good); }
+  .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .project-card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; background: var(--surface); }
+  .project-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+  .project-name { font-size: 14.5px; font-weight: 600; }
+  .version-chip { font-family: ui-monospace, monospace; font-size: 11.5px; background: var(--accent-soft); color: var(--accent); padding: 2px 7px; border-radius: 5px; white-space: nowrap; }
+  .version-chip.error { background: var(--critical-soft); color: var(--critical); }
+  .project-stats { display: flex; gap: 16px; margin-bottom: 12px; }
+  .project-stats div { font-size: 12.5px; color: var(--text-secondary); }
+  .project-stats b { font-family: ui-monospace, monospace; color: var(--text-primary); font-size: 14px; display: block; }
+  .health-bar-track { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; margin-bottom: 8px; }
+  .health-bar-fill { height: 100%; border-radius: 3px; }
+  .health-caption { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--text-muted); margin-bottom: 12px; }
+  .status-chip { font-size: 10.5px; padding: 1px 6px; border-radius: 4px; font-weight: 600; flex-shrink: 0; }
+  .status-chip.closed { background: var(--good-soft); color: var(--good); }
+  .status-chip.open { background: var(--warning-soft); color: var(--warning); }
+  .link-row { display: flex; align-items: baseline; gap: 8px; font-size: 12px; padding: 5px 0; border-top: 1px solid var(--border); }
+  .link-row:first-of-type { border-top: none; padding-top: 0; }
+  .issue-id { font-family: ui-monospace, monospace; color: var(--text-muted); flex-shrink: 0; }
+  .issue-title { color: var(--text-primary); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; }
+  .issue-title:hover { text-decoration: underline; }
+  .error-note { font-size: 12px; color: var(--critical); }
+  .placeholder { color: var(--text-secondary); background: var(--surface-2); border-radius: 10px; padding: 20px; font-size: 14px; }
+  .placeholder code { font-family: ui-monospace, monospace; background: var(--surface); padding: 1px 5px; border-radius: 4px; }
+  @media (max-width: 620px) { .stat-row, .project-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Status dos projetos</h1>
+    <span class="generated">atualizado 2026-08-10 23:56 UTC</span>
+  </header>
+  
+    <div class="stat-row">
+      <div class="stat-tile"><span class="num">279</span><span class="label">issues abertas no total</span></div>
+      <div class="stat-tile good"><span class="num">72</span><span class="label">issues fechadas no total</span></div>
+      <div class="stat-tile good"><span class="num">0</span><span class="label">repositórios com release</span></div>
+      <div class="stat-tile"><span class="num">0</span><span class="label">PRs abertos no total</span></div>
+    </div>
+    <div class="project-grid">
+      <div class="project-card">
+    <div class="project-head">
+      <span class="project-name">Servora</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>30</b>abertas</div>
+      <div><b>24</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 44%; background: var(--warning);"></div></div>
+    <div class="health-caption"><span>44% fechadas</span><span>acumulando</span></div>
+    <div class="link-row">
+    <span class="issue-id">#42</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Servora/issues/42" target="_blank" rel="noopener">[BACKEND] Observabilidade — Estrutura de logs (Log4j2, correlação, AOP e mascaramento)</a>
+    <span class="status-chip closed">fechada</span>
+  </div><div class="link-row">
+    <span class="issue-id">#49</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Servora/issues/49" target="_blank" rel="noopener">[TESTES] Logging — Casos de teste do aspecto, mascaramento e correlação</a>
+    <span class="status-chip closed">fechada</span>
+  </div><div class="link-row">
+    <span class="issue-id">#48</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Servora/issues/48" target="_blank" rel="noopener">[BACKEND] Logging — Eventos de segurança em ApiKeyFilter e ApiRateLimitInterceptor</a>
+    <span class="status-chip closed">fechada</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">Pite-Backend</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>69</b>abertas</div>
+      <div><b>6</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 8%; background: var(--critical);"></div></div>
+    <div class="health-caption"><span>8% fechadas</span><span>parado</span></div>
+    <div class="link-row">
+    <span class="issue-id">#8</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Backend/issues/8" target="_blank" rel="noopener">[INFRA] Profiles dev/prod e variáveis de ambiente</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#7</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Backend/issues/7" target="_blank" rel="noopener">[INFRA] Exception handling global + formato de erro padrão</a>
+    <span class="status-chip closed">fechada</span>
+  </div><div class="link-row">
+    <span class="issue-id">#6</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Backend/issues/6" target="_blank" rel="noopener">[INFRA] Client MinIO + buckets iniciais</a>
+    <span class="status-chip closed">fechada</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">Pite-Frontend</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>43</b>abertas</div>
+      <div><b>0</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 0%; background: var(--critical);"></div></div>
+    <div class="health-caption"><span>0% fechadas</span><span>parado</span></div>
+    <div class="link-row">
+    <span class="issue-id">#40</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Frontend/issues/40" target="_blank" rel="noopener">[SETTINGS] Configurações</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#43</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Frontend/issues/43" target="_blank" rel="noopener">[SETTINGS] Preferências de notificação</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#42</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Frontend/issues/42" target="_blank" rel="noopener">[SETTINGS] Integrações conectadas</a>
+    <span class="status-chip open">aberta</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">Pite-Mobile</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>38</b>abertas</div>
+      <div><b>0</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 0%; background: var(--critical);"></div></div>
+    <div class="health-caption"><span>0% fechadas</span><span>parado</span></div>
+    <div class="link-row">
+    <span class="issue-id">#34</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Mobile/issues/34" target="_blank" rel="noopener">[PROFILE] Perfil do atleta</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#38</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Mobile/issues/38" target="_blank" rel="noopener">[PROFILE] Atalho para gerenciar dispositivos conectados</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#37</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Mobile/issues/37" target="_blank" rel="noopener">[PROFILE] Vincular/contratar assessoria</a>
+    <span class="status-chip open">aberta</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">reserva_facil_api</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>40</b>abertas</div>
+      <div><b>41</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 51%; background: var(--warning);"></div></div>
+    <div class="health-caption"><span>51% fechadas</span><span>acumulando</span></div>
+    <div class="link-row">
+    <span class="issue-id">#25</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/reserva_facil_api/issues/25" target="_blank" rel="noopener">[Dívida técnica] Aumentar cobertura de testes unitários</a>
+    <span class="status-chip closed">fechada</span>
+  </div><div class="link-row">
+    <span class="issue-id">#31</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/reserva_facil_api/issues/31" target="_blank" rel="noopener">Upload de logo da empresa</a>
+    <span class="status-chip closed">fechada</span>
+  </div><div class="link-row">
+    <span class="issue-id">#17</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/reserva_facil_api/issues/17" target="_blank" rel="noopener">Reembolso automático ao cancelar reserva paga</a>
+    <span class="status-chip closed">fechada</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">reserva-facil-front</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>30</b>abertas</div>
+      <div><b>1</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 3%; background: var(--critical);"></div></div>
+    <div class="health-caption"><span>3% fechadas</span><span>parado</span></div>
+    <div class="link-row">
+    <span class="issue-id">#1</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/reserva-facil-front/issues/1" target="_blank" rel="noopener">[Dívida técnica] Reescrever README do frontend</a>
+    <span class="status-chip closed">fechada</span>
+  </div><div class="link-row">
+    <span class="issue-id">#31</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/reserva-facil-front/issues/31" target="_blank" rel="noopener">[REFATORAÇÃO] Migrar *ngFor legado remanescente para @for</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#30</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/reserva-facil-front/issues/30" target="_blank" rel="noopener">[REFATORAÇÃO] Adicionar ChangeDetectionStrategy.OnPush nos componentes</a>
+    <span class="status-chip open">aberta</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">IntegraFlux-Api</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>14</b>abertas</div>
+      <div><b>0</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 0%; background: var(--critical);"></div></div>
+    <div class="health-caption"><span>0% fechadas</span><span>parado</span></div>
+    <div class="link-row">
+    <span class="issue-id">#14</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/IntegraFlux-Api/issues/14" target="_blank" rel="noopener">[Dívida técnica] JwtService reprocessa/reassina o token várias vezes por requisição</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#13</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/IntegraFlux-Api/issues/13" target="_blank" rel="noopener">[Dívida técnica] GlobalExceptionHandler não trata exceções comuns do Spring MVC (caem como 500 genérico)</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#12</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/IntegraFlux-Api/issues/12" target="_blank" rel="noopener">[Dívida técnica] TenantContextHolder usa InheritableThreadLocal, incompatível com o pool @Async da Auditoria</a>
+    <span class="status-chip open">aberta</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">IntegraFlux-Front</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>15</b>abertas</div>
+      <div><b>0</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 0%; background: var(--critical);"></div></div>
+    <div class="health-caption"><span>0% fechadas</span><span>parado</span></div>
+    <div class="link-row">
+    <span class="issue-id">#15</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/IntegraFlux-Front/issues/15" target="_blank" rel="noopener">[Segurança] Avaliar armazenamento de access/refresh token em localStorage (risco de XSS)</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#14</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/IntegraFlux-Front/issues/14" target="_blank" rel="noopener">[Dívida técnica] Rotação de refresh token não é segura em múltiplas abas simultâneas</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#13</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/IntegraFlux-Front/issues/13" target="_blank" rel="noopener">[Dívida técnica] apiClient não desloga o usuário em 401 que não seja TOKEN_EXPIRED</a>
+    <span class="status-chip open">aberta</span>
+  </div>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">ImobiSim_Backend</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>0</b>abertas</div>
+      <div><b>0</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 0%; background: var(--text-muted);"></div></div>
+    <div class="health-caption"><span>—</span><span>sem issues ainda</span></div>
+    <p class="error-note">Nenhuma issue ainda.</p>
+  </div>
+<div class="project-card">
+    <div class="project-head">
+      <span class="project-name">ImobiSim</span>
+      <span class="version-chip">sem release</span>
+    </div>
+    <div class="project-stats">
+      <div><b>0</b>abertas</div>
+      <div><b>0</b>fechadas</div>
+      <div><b>0</b>PRs abertos</div>
+    </div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 0%; background: var(--text-muted);"></div></div>
+    <div class="health-caption"><span>—</span><span>sem issues ainda</span></div>
+    <p class="error-note">Nenhuma issue ainda.</p>
+  </div>
+      
+    </div>
+</div>
+</body>
+</html>

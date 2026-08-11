@@ -26,7 +26,6 @@ jobs:
       - name: Collect + build
         env:
           GH_TOKEN: ${{ secrets.DASHBOARD_PAT }}
-          PROJECTS_TOKEN: ${{ secrets.PROJECTS_PAT }}
         run: npm run refresh
 
       - name: Commit updated dashboard

@@ -28,26 +28,19 @@ O workflow precisa de um token com leitura nos 10 repositórios privados — o
    gh secret set DASHBOARD_PAT --repo kevinDsousa/status-dashboard
    ```
    (cole o token quando pedir — assim ele nunca fica no histórico do terminal nem em texto no chat)
-
-A coluna "Em andamento" lê o status real dos quadros 9 (Projetos Pessoais) e 10 (Pite) —
-e Projects de conta pessoal **não** aparecem nas permissões "Account" dos tokens
-fine-grained (limitação atual do GitHub). Por isso precisa de um segundo token, clássico:
-
-3. Crie um **classic token** em https://github.com/settings/tokens/new
-   - Marque só o escopo `read:project` (nada de `repo` — esse token não precisa
-     enxergar código, só os quadros)
-   - Sem data de expiração ou com a que preferir
-4. Adicione como secret:
-   ```
-   gh secret set PROJECTS_PAT --repo kevinDsousa/status-dashboard
-   ```
-5. Rode manualmente uma vez para confirmar:
+3. Rode manualmente uma vez para confirmar:
    ```
    gh workflow run update-dashboard.yml --repo kevinDsousa/status-dashboard
    ```
 
-Até os secrets existirem, `docs/index.html` mostra uma mensagem de espera em vez de
-dados (`DASHBOARD_PAT`) ou só fica sem itens em "Em andamento" (`PROJECTS_PAT`).
+Até o secret existir, `docs/index.html` mostra uma mensagem de espera em vez de dados.
+
+> Chegamos a testar usar o status real dos quadros 9/10 (Todo/In Progress/Done) na
+> coluna "Atualizadas recentemente", mas Projects de conta pessoal não são cobertos
+> pelas permissões "Account" dos tokens fine-grained, e cruzar isso exigiria um
+> token clássico com escopo `repo` completo (leitura e escrita em tudo) — trade-off
+> que não valeu a pena só por essa coluna. Se você criou um `PROJECTS_PAT`/token
+> `read:project` pra testar isso, pode apagar — não é mais usado.
 
 ## Rodar localmente
 

@@ -79,7 +79,7 @@ function repoCard(r) {
 
   const inProgressRows = r.inProgress.length
     ? r.inProgress.map((i) => issueRow(i)).join("")
-    : `<p class="error-note">Nada em andamento.</p>`;
+    : `<p class="error-note">Nenhuma issue aberta.</p>`;
 
   const recentRows = r.recentlyCreated.length
     ? r.recentlyCreated.map((i) => issueRow(i)).join("")
@@ -103,7 +103,7 @@ function repoCard(r) {
     <div class="health-caption"><span>${ratio === null ? "—" : ratio + "% fechadas"}</span><span>${healthLabel(ratio)}</span></div>
     <div class="issue-columns">
       <div class="issue-column">
-        <p class="issue-column-label">Em andamento</p>
+        <p class="issue-column-label">Atualizadas recentemente</p>
         ${inProgressRows}
       </div>
       <div class="issue-column">

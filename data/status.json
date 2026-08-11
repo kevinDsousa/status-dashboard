@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T01:41:30.052Z",
+  "generatedAt": "2026-08-11T01:41:48.376Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -53,22 +53,7 @@
       "closedRatio": 9,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [
-        {
-          "number": 9,
-          "title": "[INFRA] OpenAPI/Swagger",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/9",
-          "state": "OPEN",
-          "updatedAt": "2026-08-11T01:09:49Z"
-        },
-        {
-          "number": 1,
-          "title": "[INFRA] Fundação do projeto Spring Boot",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/1",
-          "state": "OPEN",
-          "updatedAt": "2026-08-10T00:23:36Z"
-        }
-      ],
+      "inProgress": [],
       "recentlyCreated": [
         {
           "number": 75,
@@ -240,15 +225,7 @@
       "closedRatio": 3,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [
-        {
-          "number": 3,
-          "title": "Tela de histórico de pagamentos",
-          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/3",
-          "state": "OPEN",
-          "updatedAt": "2026-08-01T01:43:38Z"
-        }
-      ],
+      "inProgress": [],
       "recentlyCreated": [
         {
           "number": 31,

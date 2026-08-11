@@ -17,7 +17,10 @@ query($owner: String!, $name: String!) {
     releases(first: 5, orderBy: { field: CREATED_AT, direction: DESC }) {
       nodes { tagName name description publishedAt url }
     }
-    recentIssues: issues(first: 3, orderBy: { field: UPDATED_AT, direction: DESC }) {
+    inProgress: issues(states: OPEN, first: 5, orderBy: { field: UPDATED_AT, direction: DESC }) {
+      nodes { number title state url }
+    }
+    recentlyCreated: issues(first: 5, orderBy: { field: CREATED_AT, direction: DESC }) {
       nodes { number title state url }
     }
   }
@@ -56,7 +59,8 @@ async function fetchRepo({ owner, name }) {
     closedRatio: total > 0 ? Math.round((closed / total) * 100) : null,
     latestRelease: r.releases.nodes[0] ?? null,
     releases: r.releases.nodes,
-    recentIssues: r.recentIssues.nodes,
+    inProgress: r.inProgress.nodes,
+    recentlyCreated: r.recentlyCreated.nodes,
   };
 }
 

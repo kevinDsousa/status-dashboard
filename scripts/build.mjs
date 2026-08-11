@@ -26,6 +26,17 @@ function healthLabel(ratio) {
   return "parado";
 }
 
+function healthKey(ratio) {
+  if (ratio === null) return "sem-issues";
+  if (ratio >= 60) return "saudavel";
+  if (ratio >= 30) return "acumulando";
+  return "parado";
+}
+
+function normalize(s) {
+  return String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 const okRepos = data.repos.filter((r) => !r.error);
 const erroredRepos = data.repos.filter((r) => r.error);
 
@@ -40,7 +51,7 @@ const totals = okRepos.reduce(
   { open: 0, closed: 0, openPRs: 0, withRelease: 0 }
 );
 
-function issueRow(issue, owner, name) {
+function issueRow(issue) {
   const chip = issue.state === "CLOSED"
     ? `<span class="status-chip closed">fechada</span>`
     : `<span class="status-chip open">aberta</span>`;
@@ -53,7 +64,7 @@ function issueRow(issue, owner, name) {
 
 function repoCard(r) {
   if (r.error) {
-    return `<div class="project-card">
+    return `<div class="project-card" data-health="erro" data-search="${esc(normalize(r.name))}">
       <div class="project-head">
         <span class="project-name">${esc(r.owner)}/${esc(r.name)}</span>
         <span class="version-chip error">erro na coleta</span>
@@ -66,13 +77,19 @@ function repoCard(r) {
     ? `${esc(r.latestRelease.tagName)}`
     : "sem release";
 
-  const rows = r.recentIssues.length
-    ? r.recentIssues.map((i) => issueRow(i, r.owner, r.name)).join("")
+  const inProgressRows = r.inProgress.length
+    ? r.inProgress.map((i) => issueRow(i)).join("")
+    : `<p class="error-note">Nada em andamento.</p>`;
+
+  const recentRows = r.recentlyCreated.length
+    ? r.recentlyCreated.map((i) => issueRow(i)).join("")
     : `<p class="error-note">Nenhuma issue ainda.</p>`;
 
   const ratio = r.closedRatio;
+  const allTitles = [...r.inProgress, ...r.recentlyCreated].map((i) => `#${i.number} ${i.title}`);
+  const searchText = normalize([r.name, ...new Set(allTitles)].join(" "));
 
-  return `<div class="project-card">
+  return `<div class="project-card" data-health="${healthKey(ratio)}" data-search="${esc(searchText)}">
     <div class="project-head">
       <span class="project-name">${esc(r.name)}</span>
       <span class="version-chip">${version}</span>
@@ -84,7 +101,16 @@ function repoCard(r) {
     </div>
     <div class="health-bar-track"><div class="health-bar-fill" style="width: ${ratio ?? 0}%; background: ${healthColor(ratio)};"></div></div>
     <div class="health-caption"><span>${ratio === null ? "—" : ratio + "% fechadas"}</span><span>${healthLabel(ratio)}</span></div>
-    ${rows}
+    <div class="issue-columns">
+      <div class="issue-column">
+        <p class="issue-column-label">Em andamento</p>
+        ${inProgressRows}
+      </div>
+      <div class="issue-column">
+        <p class="issue-column-label">Mais recentes</p>
+        ${recentRows}
+      </div>
+    </div>
   </div>`;
 }
 
@@ -193,7 +219,7 @@ const html = `<!doctype html>
     font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0; padding: 40px 20px 80px; line-height: 1.5;
   }
-  .page { max-width: 900px; margin: 0 auto; }
+  .page { min-width: 0; }
   header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
   h1 { font-size: 22px; margin: 0; }
   .generated { font-size: 12px; color: var(--text-muted); font-family: ui-monospace, monospace; }
@@ -217,11 +243,15 @@ const html = `<!doctype html>
   .status-chip { font-size: 10.5px; padding: 1px 6px; border-radius: 4px; font-weight: 600; flex-shrink: 0; }
   .status-chip.closed { background: var(--good-soft); color: var(--good); }
   .status-chip.open { background: var(--warning-soft); color: var(--warning); }
-  .link-row { display: flex; align-items: baseline; gap: 8px; font-size: 12px; padding: 5px 0; border-top: 1px solid var(--border); }
+  .issue-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; margin-top: 4px; }
+  .issue-column { min-width: 0; }
+  .issue-column-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .03em; color: var(--text-muted); margin: 0 0 4px; }
+  .link-row { display: flex; align-items: baseline; gap: 6px; font-size: 11.5px; padding: 4px 0; border-top: 1px solid var(--border); min-width: 0; }
   .link-row:first-of-type { border-top: none; padding-top: 0; }
   .issue-id { font-family: ui-monospace, monospace; color: var(--text-muted); flex-shrink: 0; }
   .issue-title { color: var(--text-primary); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; }
   .issue-title:hover { text-decoration: underline; }
+  @media (max-width: 460px) { .issue-columns { grid-template-columns: 1fr; gap: 14px 0; } }
   .error-note { font-size: 12px; color: var(--critical); }
   .placeholder { color: var(--text-secondary); background: var(--surface-2); border-radius: 10px; padding: 20px; font-size: 14px; }
   .placeholder code { font-family: ui-monospace, monospace; background: var(--surface); padding: 1px 5px; border-radius: 4px; }
@@ -239,17 +269,111 @@ const html = `<!doctype html>
   }
   .release-link { font-size: 12px; color: var(--accent); text-decoration: none; }
   .release-link:hover { text-decoration: underline; }
-  @media (max-width: 620px) { .stat-row, .project-grid { grid-template-columns: 1fr 1fr; } }
+
+  .layout { display: grid; grid-template-columns: 190px 1fr; gap: 28px; max-width: 1140px; margin: 0 auto; align-items: start; }
+  .sidebar { position: sticky; top: 40px; display: flex; flex-direction: column; gap: 18px; }
+  .search-box {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 10px; font-size: 13px; color: var(--text-primary); width: 100%;
+  }
+  .search-box:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .sidebar-label { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--text-muted); margin: 0 0 8px; }
+  .chip-list { display: flex; flex-direction: column; gap: 6px; }
+  .chip {
+    display: flex; align-items: center; gap: 7px; background: none; border: 1px solid var(--border);
+    border-radius: 7px; padding: 6px 9px; font-size: 12.5px; color: var(--text-secondary);
+    cursor: pointer; text-align: left; font-family: inherit;
+  }
+  .chip:hover { border-color: var(--accent); color: var(--text-primary); }
+  .chip.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .chip-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .chip-dot.saudavel { background: var(--good); }
+  .chip-dot.acumulando { background: var(--warning); }
+  .chip-dot.parado { background: var(--critical); }
+  .chip-dot.sem-issues { background: var(--text-muted); }
+  .result-count { font-size: 11.5px; color: var(--text-muted); margin: 0; }
+  .no-results { display: none; color: var(--text-secondary); font-size: 13px; padding: 20px 0; }
+
+  @media (max-width: 780px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+    .chip-list { flex-direction: row; flex-wrap: wrap; }
+  }
 </style>
 </head>
 <body>
-<div class="page">
-  <header>
-    <h1>Status dos projetos</h1>
-    <span class="generated">atualizado ${esc(generatedLabel)}</span>
-  </header>
-  ${bodyContent}
+<div class="layout">
+  <aside class="sidebar">
+    <div>
+      <input type="search" class="search-box" id="repoSearch" placeholder="Buscar repo ou issue…" autocomplete="off">
+    </div>
+    <div>
+      <p class="sidebar-label">Status</p>
+      <div class="chip-list" id="healthChips">
+        <button type="button" class="chip" data-filter="saudavel"><span class="chip-dot saudavel"></span>Saudável</button>
+        <button type="button" class="chip" data-filter="acumulando"><span class="chip-dot acumulando"></span>Acumulando</button>
+        <button type="button" class="chip" data-filter="parado"><span class="chip-dot parado"></span>Parado</button>
+        <button type="button" class="chip" data-filter="sem-issues"><span class="chip-dot sem-issues"></span>Sem issues</button>
+      </div>
+    </div>
+    <p class="result-count" id="resultCount"></p>
+  </aside>
+  <div class="page">
+    <header>
+      <h1>Status dos projetos</h1>
+      <span class="generated">atualizado ${esc(generatedLabel)}</span>
+    </header>
+    ${bodyContent}
+    <p class="no-results" id="noResults">Nenhum projeto bate com esse filtro.</p>
+  </div>
 </div>
+<script>
+(function () {
+  var search = document.getElementById("repoSearch");
+  var chips = document.querySelectorAll(".chip");
+  var cards = document.querySelectorAll(".project-card");
+  var resultCount = document.getElementById("resultCount");
+  var noResults = document.getElementById("noResults");
+  if (!cards.length) return;
+
+  var activeFilters = new Set();
+
+  function normalize(s) {
+    return (s || "").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, "");
+  }
+
+  function apply() {
+    var query = normalize(search.value.trim());
+    var visible = 0;
+    cards.forEach(function (card) {
+      var matchesSearch = !query || (card.dataset.search || "").indexOf(query) !== -1;
+      var matchesHealth = activeFilters.size === 0 || activeFilters.has(card.dataset.health);
+      var show = matchesSearch && matchesHealth;
+      card.style.display = show ? "" : "none";
+      if (show) visible += 1;
+    });
+    resultCount.textContent = visible + " de " + cards.length + " projetos";
+    noResults.style.display = visible === 0 ? "block" : "none";
+  }
+
+  search.addEventListener("input", apply);
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var key = chip.dataset.filter;
+      if (activeFilters.has(key)) {
+        activeFilters.delete(key);
+        chip.classList.remove("active");
+      } else {
+        activeFilters.add(key);
+        chip.classList.add("active");
+      }
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>
 </body>
 </html>
 `;

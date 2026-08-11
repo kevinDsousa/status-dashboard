@@ -58,12 +58,19 @@ async function fetchInProgressByRepo() {
 
   for (const number of PROJECT_NUMBERS) {
     let cursor = null;
+    let seen = 0;
+    let withIssue = 0;
+    let withStatus = 0;
     do {
       const data = await graphql(PROJECT_ITEMS_QUERY, { number, cursor }, projectsToken);
       const items = data.user.projectV2.items;
+      seen += items.nodes.length;
       for (const item of items.nodes) {
         if (item.content?.__typename !== "Issue") continue;
-        if (item.fieldValueByName?.name !== "In Progress") continue;
+        withIssue += 1;
+        if (!item.fieldValueByName) continue;
+        withStatus += 1;
+        if (item.fieldValueByName.name !== "In Progress") continue;
         const repoName = item.content.repository.name;
         const list = byRepo.get(repoName) ?? [];
         list.push({
@@ -77,6 +84,7 @@ async function fetchInProgressByRepo() {
       }
       cursor = items.pageInfo.hasNextPage ? items.pageInfo.endCursor : null;
     } while (cursor);
+    console.log(`  projeto ${number}: ${seen} itens, ${withIssue} são issues, ${withStatus} têm campo Status legível`);
   }
 
   for (const [repoName, list] of byRepo) {

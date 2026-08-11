@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T01:52:44.893Z",
+  "generatedAt": "2026-08-11T01:57:27.871Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -10,7 +10,38 @@
       "closedRatio": 44,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 54,
+          "title": "[REFACTOR] Camada de serviço — Frigorifico acessando ProdutoFrigorificoRepository/PendenciaFrigorificoRepository direto",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/54"
+        },
+        {
+          "number": 53,
+          "title": "[REFACTOR] Camada de serviço — Conf (árvore de permissões) acessando Repository de outro nível direto",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/53"
+        },
+        {
+          "number": 52,
+          "title": "[REFACTOR] Camada de serviço — Personalizados acessando Repository de outro domínio direto",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/52"
+        },
+        {
+          "number": 51,
+          "title": "[REFACTOR] Camada de serviço — UsuarioServiceImpl acessando PerfilRepository/EmpresaRepository direto",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/51"
+        },
+        {
+          "number": 50,
+          "title": "[REFACTOR] Dívida técnica — Services acessando Repository de outro domínio direto",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/50"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 54,
@@ -53,7 +84,38 @@
       "closedRatio": 9,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 9,
+          "title": "[INFRA] OpenAPI/Swagger",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/9"
+        },
+        {
+          "number": 1,
+          "title": "[INFRA] Fundação do projeto Spring Boot",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/1"
+        },
+        {
+          "number": 71,
+          "title": "[ADMIN] Administração da plataforma",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/71"
+        },
+        {
+          "number": 75,
+          "title": "[ADMIN] Métricas administrativas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/75"
+        },
+        {
+          "number": 74,
+          "title": "[ADMIN] Configuração de integrações habilitadas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/74"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 75,
@@ -96,7 +158,38 @@
       "closedRatio": 0,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 40,
+          "title": "[SETTINGS] Configurações",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/40"
+        },
+        {
+          "number": 43,
+          "title": "[SETTINGS] Preferências de notificação",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
+        },
+        {
+          "number": 42,
+          "title": "[SETTINGS] Integrações conectadas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
+        },
+        {
+          "number": 41,
+          "title": "[SETTINGS] Perfil do treinador/assessoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
+        },
+        {
+          "number": 36,
+          "title": "[AI-INSIGHTS] Painel de sugestões de IA",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/36"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 43,
@@ -139,7 +232,38 @@
       "closedRatio": 0,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 34,
+          "title": "[PROFILE] Perfil do atleta",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/34"
+        },
+        {
+          "number": 38,
+          "title": "[PROFILE] Atalho para gerenciar dispositivos conectados",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/38"
+        },
+        {
+          "number": 37,
+          "title": "[PROFILE] Vincular/contratar assessoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/37"
+        },
+        {
+          "number": 36,
+          "title": "[PROFILE] Upload de foto de perfil",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/36"
+        },
+        {
+          "number": 35,
+          "title": "[PROFILE] Edição de dados físicos e objetivos",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/35"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 38,
@@ -182,7 +306,38 @@
       "closedRatio": 51,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 94,
+          "title": "[REFATORAÇÃO] Remover rota DELETE duplicada (dead code) em business-members.controller.ts",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/94"
+        },
+        {
+          "number": 93,
+          "title": "[Padronização] Avaliar /verification-code para o padrão { data } (depende de #24)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/93"
+        },
+        {
+          "number": 92,
+          "title": "[Padronização] Envolver respostas de /rooms em { data }",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/92"
+        },
+        {
+          "number": 91,
+          "title": "[Padronização] Envolver GET /plans em { data }",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/91"
+        },
+        {
+          "number": 90,
+          "title": "[Padronização] Avaliar /login para o padrão { data } (possível breaking change)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva_facil_api/issues/90"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 94,
@@ -225,7 +380,38 @@
       "closedRatio": 3,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 31,
+          "title": "[REFATORAÇÃO] Migrar *ngFor legado remanescente para @for",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/31"
+        },
+        {
+          "number": 30,
+          "title": "[REFATORAÇÃO] Adicionar ChangeDetectionStrategy.OnPush nos componentes",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/30"
+        },
+        {
+          "number": 29,
+          "title": "[REFATORAÇÃO] Unificar estratégia de máscara de input (ngx-mask vs diretivas caseiras)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/29"
+        },
+        {
+          "number": 28,
+          "title": "[REFATORAÇÃO] Ampliar cobertura de testes dos services de domínio (0% hoje)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/28"
+        },
+        {
+          "number": 27,
+          "title": "[REFATORAÇÃO] Unificar diretivas de validação mortas/divergentes (CPF, senha)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/27"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 31,
@@ -268,7 +454,38 @@
       "closedRatio": 0,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 14,
+          "title": "[Dívida técnica] JwtService reprocessa/reassina o token várias vezes por requisição",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/14"
+        },
+        {
+          "number": 13,
+          "title": "[Dívida técnica] GlobalExceptionHandler não trata exceções comuns do Spring MVC (caem como 500 genérico)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/13"
+        },
+        {
+          "number": 12,
+          "title": "[Dívida técnica] TenantContextHolder usa InheritableThreadLocal, incompatível com o pool @Async da Auditoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/12"
+        },
+        {
+          "number": 11,
+          "title": "[Dívida técnica] User.java usa Lombok @Data, que expõe passwordHash em toString()",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/11"
+        },
+        {
+          "number": 10,
+          "title": "[Segurança] Rotação de refresh token não detecta reuso de token já revogado",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/10"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 14,
@@ -311,7 +528,38 @@
       "closedRatio": 0,
       "latestRelease": null,
       "releases": [],
-      "inProgress": [],
+      "inProgress": [
+        {
+          "number": 15,
+          "title": "[Segurança] Avaliar armazenamento de access/refresh token em localStorage (risco de XSS)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/15"
+        },
+        {
+          "number": 14,
+          "title": "[Dívida técnica] Rotação de refresh token não é segura em múltiplas abas simultâneas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/14"
+        },
+        {
+          "number": 13,
+          "title": "[Dívida técnica] apiClient não desloga o usuário em 401 que não seja TOKEN_EXPIRED",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/13"
+        },
+        {
+          "number": 12,
+          "title": "[Dívida técnica] Viabilizar execução de testes E2E Playwright no ambiente de desenvolvimento",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/12"
+        },
+        {
+          "number": 11,
+          "title": "[Dívida técnica] Corrigir passo final do pnpm build (cp instrument.server.mjs .output/server)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Front/issues/11"
+        }
+      ],
       "recentlyCreated": [
         {
           "number": 15,

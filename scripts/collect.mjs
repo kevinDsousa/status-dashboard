@@ -1,6 +1,11 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 
 const token = process.env.GH_TOKEN;
+// Projects de conta pessoal não são cobertos pelas permissões "Account" dos tokens
+// fine-grained — só um classic PAT com escopo read:project enxerga os quadros 9/10.
+// Sem ele, cai pro token principal (que falha graciosamente e só deixa "Em andamento" vazio).
+const projectsToken = process.env.PROJECTS_TOKEN || token;
+
 if (!token) {
   console.error("GH_TOKEN não definido — nada pra coletar. Veja o README para configurar o secret DASHBOARD_PAT.");
   process.exit(0);
@@ -10,11 +15,11 @@ const repos = JSON.parse(readFileSync(new URL("../repos.json", import.meta.url))
 const PROJECT_LOGIN = "kevinDsousa";
 const PROJECT_NUMBERS = [9, 10];
 
-async function graphql(query, variables) {
+async function graphql(query, variables, authToken = token) {
   const res = await fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${authToken}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ query, variables }),
@@ -54,7 +59,7 @@ async function fetchInProgressByRepo() {
   for (const number of PROJECT_NUMBERS) {
     let cursor = null;
     do {
-      const data = await graphql(PROJECT_ITEMS_QUERY, { number, cursor });
+      const data = await graphql(PROJECT_ITEMS_QUERY, { number, cursor }, projectsToken);
       const items = data.user.projectV2.items;
       for (const item of items.nodes) {
         if (item.content?.__typename !== "Issue") continue;

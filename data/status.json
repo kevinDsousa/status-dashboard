@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T09:57:29.735Z",
+  "generatedAt": "2026-08-11T10:51:49.566Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,18 +78,18 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 68,
-      "closedIssues": 7,
+      "openIssues": 66,
+      "closedIssues": 9,
       "openPRs": 0,
-      "closedRatio": 9,
+      "closedRatio": 12,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
         {
-          "number": 9,
-          "title": "[INFRA] OpenAPI/Swagger",
+          "number": 11,
+          "title": "[INFRA] Healthcheck + logging estruturado",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/9"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/11"
         },
         {
           "number": 1,

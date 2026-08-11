@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T23:56:43.506Z",
+  "generatedAt": "2026-08-11T00:48:23.226Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -9,6 +9,7 @@
       "openPRs": 0,
       "closedRatio": 44,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 42,
@@ -38,6 +39,7 @@
       "openPRs": 0,
       "closedRatio": 8,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 8,
@@ -67,6 +69,7 @@
       "openPRs": 0,
       "closedRatio": 0,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 40,
@@ -96,6 +99,7 @@
       "openPRs": 0,
       "closedRatio": 0,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 34,
@@ -125,6 +129,7 @@
       "openPRs": 0,
       "closedRatio": 51,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 25,
@@ -154,6 +159,7 @@
       "openPRs": 0,
       "closedRatio": 3,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 1,
@@ -183,6 +189,7 @@
       "openPRs": 0,
       "closedRatio": 0,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 14,
@@ -212,6 +219,7 @@
       "openPRs": 0,
       "closedRatio": 0,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": [
         {
           "number": 15,
@@ -241,6 +249,7 @@
       "openPRs": 0,
       "closedRatio": null,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": []
     },
     {
@@ -251,6 +260,7 @@
       "openPRs": 0,
       "closedRatio": null,
       "latestRelease": null,
+      "releases": [],
       "recentIssues": []
     }
   ]

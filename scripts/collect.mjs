@@ -14,8 +14,8 @@ query($owner: String!, $name: String!) {
     openIssues: issues(states: OPEN) { totalCount }
     closedIssues: issues(states: CLOSED) { totalCount }
     openPRs: pullRequests(states: OPEN) { totalCount }
-    releases(first: 1, orderBy: { field: CREATED_AT, direction: DESC }) {
-      nodes { tagName publishedAt }
+    releases(first: 5, orderBy: { field: CREATED_AT, direction: DESC }) {
+      nodes { tagName name description publishedAt url }
     }
     recentIssues: issues(first: 3, orderBy: { field: UPDATED_AT, direction: DESC }) {
       nodes { number title state url }
@@ -55,6 +55,7 @@ async function fetchRepo({ owner, name }) {
     openPRs: r.openPRs.totalCount,
     closedRatio: total > 0 ? Math.round((closed / total) * 100) : null,
     latestRelease: r.releases.nodes[0] ?? null,
+    releases: r.releases.nodes,
     recentIssues: r.recentIssues.nodes,
   };
 }

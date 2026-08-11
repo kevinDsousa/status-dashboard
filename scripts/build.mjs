@@ -92,6 +92,44 @@ const generatedLabel = data.generatedAt
   ? new Date(data.generatedAt).toISOString().replace("T", " ").slice(0, 16) + " UTC"
   : "ainda não coletado";
 
+const allReleases = okRepos
+  .flatMap((r) => (r.releases ?? []).map((rel) => ({ ...rel, repo: r.name })))
+  .filter((rel) => rel.publishedAt)
+  .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+  .slice(0, 12);
+
+function releaseItem(rel) {
+  const date = new Date(rel.publishedAt).toISOString().slice(0, 10);
+  const title = rel.name && rel.name !== rel.tagName ? `${esc(rel.name)}` : "";
+  const notes = (rel.description ?? "").trim();
+  return `<div class="release-item">
+    <div class="release-head">
+      <span class="release-repo">${esc(rel.repo)}</span>
+      <span class="version-chip">${esc(rel.tagName)}</span>
+      ${title ? `<span class="release-title">${title}</span>` : ""}
+      <span class="release-date">${date}</span>
+    </div>
+    ${notes
+      ? `<div class="release-notes">${esc(notes)}</div>`
+      : `<p class="error-note">Sem notas de release.</p>`}
+    <a class="release-link" href="${esc(rel.url)}" target="_blank" rel="noopener">ver release completa →</a>
+  </div>`;
+}
+
+const releasesSection = allReleases.length
+  ? `<section>
+      <h2>Releases recentes</h2>
+      <div class="release-list">
+        ${allReleases.map(releaseItem).join("\n")}
+      </div>
+    </section>`
+  : hasData && okRepos.length
+    ? `<section>
+        <h2>Releases recentes</h2>
+        <p class="error-note">Nenhuma release publicada em nenhum dos repositórios ainda.</p>
+      </section>`
+    : "";
+
 const bodyContent = hasData && okRepos.length
   ? `
     <div class="stat-row">
@@ -103,7 +141,8 @@ const bodyContent = hasData && okRepos.length
     <div class="project-grid">
       ${okRepos.map(repoCard).join("\n")}
       ${erroredRepos.map(repoCard).join("\n")}
-    </div>`
+    </div>
+    ${releasesSection}`
   : `<p class="placeholder">
       Ainda sem dados. O workflow <code>update-dashboard.yml</code> precisa do secret
       <code>DASHBOARD_PAT</code> configurado (veja o README) antes de conseguir ler os
@@ -148,6 +187,7 @@ const html = `<!doctype html>
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2);
   }
   * { box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
   body {
     background: var(--bg); color: var(--text-primary);
     font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -180,11 +220,25 @@ const html = `<!doctype html>
   .link-row { display: flex; align-items: baseline; gap: 8px; font-size: 12px; padding: 5px 0; border-top: 1px solid var(--border); }
   .link-row:first-of-type { border-top: none; padding-top: 0; }
   .issue-id { font-family: ui-monospace, monospace; color: var(--text-muted); flex-shrink: 0; }
-  .issue-title { color: var(--text-primary); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; }
+  .issue-title { color: var(--text-primary); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; }
   .issue-title:hover { text-decoration: underline; }
   .error-note { font-size: 12px; color: var(--critical); }
   .placeholder { color: var(--text-secondary); background: var(--surface-2); border-radius: 10px; padding: 20px; font-size: 14px; }
   .placeholder code { font-family: ui-monospace, monospace; background: var(--surface); padding: 1px 5px; border-radius: 4px; }
+  section { margin-top: 32px; }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  .release-list { display: flex; flex-direction: column; gap: 10px; }
+  .release-item { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; background: var(--surface); }
+  .release-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .release-repo { font-size: 13px; font-weight: 600; }
+  .release-title { font-size: 13px; color: var(--text-secondary); }
+  .release-date { font-family: ui-monospace, monospace; font-size: 11.5px; color: var(--text-muted); margin-left: auto; }
+  .release-notes {
+    font-size: 13px; color: var(--text-secondary); white-space: pre-wrap;
+    max-height: 4.5em; overflow: hidden; margin-bottom: 6px; line-height: 1.5;
+  }
+  .release-link { font-size: 12px; color: var(--accent); text-decoration: none; }
+  .release-link:hover { text-decoration: underline; }
   @media (max-width: 620px) { .stat-row, .project-grid { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T23:59:18.416Z",
+  "generatedAt": "2026-08-12T02:32:09.801Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,18 +78,38 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 65,
-      "closedIssues": 10,
-      "openPRs": 0,
-      "closedRatio": 13,
-      "latestRelease": null,
-      "releases": [],
+      "openIssues": 64,
+      "closedIssues": 11,
+      "openPRs": 1,
+      "closedRatio": 15,
+      "latestRelease": {
+        "tagName": "v0.1.0",
+        "name": "v0.1.0 — Fundação do projeto Spring Boot",
+        "description": "## Checkpoint: fim do módulo `[INFRA] Fundação do projeto Spring Boot` (#1)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API — marca apenas que o módulo de fundação (issues #2 a #11) está concluído. Nenhum domínio de negócio (Identity, Athlete, Workout etc.) existe ainda.\n\n### O que entra nessa versão\n\n- **Estrutura do projeto**: Maven, Java 21, Spring Boot 4.1.0, empacotamento por domínio (#2).\n- **Docker Compose**: Postgres + Redis + MinIO + app, com healthchecks e portas configuráveis via `.env` (#3).\n- **PostgreSQL + Flyway**: `ddl-auto=validate` em todos os profiles, migrations versionadas (#4).\n- **Cache Redis**: `RedisCacheManager` + `@EnableCaching`, convenção de nome/TTL documentada (#5).\n- **MinIO**: `StorageService` genérico (upload/download/delete/presignedUrl), buckets iniciais criados automaticamente (#6).\n- **Tratamento de erro global**: `ApiError` padronizado, `GlobalExceptionHandler` cobrindo 404/400/403/500 (#7).\n- **Profiles `dev`/`prod`**: variáveis de ambiente, sem credencial hardcoded, CORS por ambiente (#8).\n- **OpenAPI/Swagger**: documentação automática em `/swagger-ui/index.html`, versionamento `/api/v1` (#9).\n- **CI/CD**: build + testes + Testcontainers + lint como gates obrigatórios em todo push/PR (#10).\n- **Healthcheck + logging estruturado**: `/actuator/health` (Postgres/Redis/MinIO), logging via [trilha-log](https://github.com/trilha-log/trilha-log) com `traceId` de correlação por requisição (#11).\n\n### Limitações conhecidas\n\n- **Endpoints exigem HTTP Basic Auth por padrão** (senha aleatória gerada no boot), inclusive `/swagger-ui`, `/v3/api-docs` e rotas inexistentes (que deveriam devolver 404, hoje devolvem 401). Isso é o comportamento padrão do Spring Security sem um `SecurityFilterChain` customizado — só `/actuator/health` é liberado publicamente pela autoconfiguração do Actuator. Fica resolvido quando o épico `[IDENTITY]` (autenticação real) for implementado.\n- **Proteção de branch em `main`** não pôde ser configurada — GitHub bloqueia essa feature (branch protection/rulesets) para repositórios privados em contas Free (exige upgrade para Pro/Team, ou tornar o repositório público).\n\n### Como rodar\n\nVer `README.md` — `docker compose up -d --build` (com `.env` configurado, incluindo `GITHUB_ACTOR`/`GITHUB_TOKEN` para resolver o `trilha-log` do GitHub Packages).\n",
+        "publishedAt": "2026-08-12T02:04:36Z",
+        "url": "https://github.com/kevinDsousa/Pite-Backend/releases/tag/v0.1.0"
+      },
+      "releases": [
+        {
+          "tagName": "v0.1.0",
+          "name": "v0.1.0 — Fundação do projeto Spring Boot",
+          "description": "## Checkpoint: fim do módulo `[INFRA] Fundação do projeto Spring Boot` (#1)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API — marca apenas que o módulo de fundação (issues #2 a #11) está concluído. Nenhum domínio de negócio (Identity, Athlete, Workout etc.) existe ainda.\n\n### O que entra nessa versão\n\n- **Estrutura do projeto**: Maven, Java 21, Spring Boot 4.1.0, empacotamento por domínio (#2).\n- **Docker Compose**: Postgres + Redis + MinIO + app, com healthchecks e portas configuráveis via `.env` (#3).\n- **PostgreSQL + Flyway**: `ddl-auto=validate` em todos os profiles, migrations versionadas (#4).\n- **Cache Redis**: `RedisCacheManager` + `@EnableCaching`, convenção de nome/TTL documentada (#5).\n- **MinIO**: `StorageService` genérico (upload/download/delete/presignedUrl), buckets iniciais criados automaticamente (#6).\n- **Tratamento de erro global**: `ApiError` padronizado, `GlobalExceptionHandler` cobrindo 404/400/403/500 (#7).\n- **Profiles `dev`/`prod`**: variáveis de ambiente, sem credencial hardcoded, CORS por ambiente (#8).\n- **OpenAPI/Swagger**: documentação automática em `/swagger-ui/index.html`, versionamento `/api/v1` (#9).\n- **CI/CD**: build + testes + Testcontainers + lint como gates obrigatórios em todo push/PR (#10).\n- **Healthcheck + logging estruturado**: `/actuator/health` (Postgres/Redis/MinIO), logging via [trilha-log](https://github.com/trilha-log/trilha-log) com `traceId` de correlação por requisição (#11).\n\n### Limitações conhecidas\n\n- **Endpoints exigem HTTP Basic Auth por padrão** (senha aleatória gerada no boot), inclusive `/swagger-ui`, `/v3/api-docs` e rotas inexistentes (que deveriam devolver 404, hoje devolvem 401). Isso é o comportamento padrão do Spring Security sem um `SecurityFilterChain` customizado — só `/actuator/health` é liberado publicamente pela autoconfiguração do Actuator. Fica resolvido quando o épico `[IDENTITY]` (autenticação real) for implementado.\n- **Proteção de branch em `main`** não pôde ser configurada — GitHub bloqueia essa feature (branch protection/rulesets) para repositórios privados em contas Free (exige upgrade para Pro/Team, ou tornar o repositório público).\n\n### Como rodar\n\nVer `README.md` — `docker compose up -d --build` (com `.env` configurado, incluindo `GITHUB_ACTOR`/`GITHUB_TOKEN` para resolver o `trilha-log` do GitHub Packages).\n",
+          "publishedAt": "2026-08-12T02:04:36Z",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/releases/tag/v0.1.0"
+        }
+      ],
       "inProgress": [
         {
-          "number": 1,
-          "title": "[INFRA] Fundação do projeto Spring Boot",
+          "number": 13,
+          "title": "[IDENTITY] Entidade User + enum Role e configuração do Spring Security",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/1"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/13"
+        },
+        {
+          "number": 12,
+          "title": "[IDENTITY] Autenticação e controle de acesso",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/12"
         },
         {
           "number": 71,
@@ -108,12 +128,6 @@
           "title": "[ADMIN] Configuração de integrações habilitadas",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/74"
-        },
-        {
-          "number": 73,
-          "title": "[ADMIN] Estrutura inicial de planos/assinaturas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/73"
         }
       ],
       "recentlyCreated": [

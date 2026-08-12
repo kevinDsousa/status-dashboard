@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T22:11:07.321Z",
+  "generatedAt": "2026-08-12T23:01:21.345Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -11,6 +11,12 @@
       "latestRelease": null,
       "releases": [],
       "inProgress": [
+        {
+          "number": 50,
+          "title": "[REFACTOR] Dívida técnica — Services acessando Repository de outro domínio direto",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/50"
+        },
         {
           "number": 54,
           "title": "[REFACTOR] Camada de serviço — Frigorifico acessando ProdutoFrigorificoRepository/PendenciaFrigorificoRepository direto",
@@ -34,12 +40,6 @@
           "title": "[REFACTOR] Camada de serviço — UsuarioServiceImpl acessando PerfilRepository/EmpresaRepository direto",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Servora/issues/51"
-        },
-        {
-          "number": 50,
-          "title": "[REFACTOR] Dívida técnica — Services acessando Repository de outro domínio direto",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/50"
         }
       ],
       "recentlyCreated": [

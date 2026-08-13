@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T10:00:27.032Z",
+  "generatedAt": "2026-08-13T11:10:33.637Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -100,34 +100,34 @@
       ],
       "inProgress": [
         {
-          "number": 14,
-          "title": "[IDENTITY] Cadastro de usuário",
+          "number": 75,
+          "title": "[ADMIN] Métricas administrativas",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/14"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/75"
         },
         {
-          "number": 19,
-          "title": "[IDENTITY] Confirmação de e-mail no cadastro",
+          "number": 74,
+          "title": "[ADMIN] Configuração de integrações habilitadas",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/19"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/74"
         },
         {
-          "number": 18,
-          "title": "[IDENTITY] Recuperação e redefinição de senha",
+          "number": 73,
+          "title": "[ADMIN] Estrutura inicial de planos/assinaturas",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/18"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/73"
         },
         {
-          "number": 17,
-          "title": "[IDENTITY] Autorização por role (method security)",
+          "number": 72,
+          "title": "[ADMIN] Gestão de usuários (listar/bloquear/alterar role)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/17"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/72"
         },
         {
-          "number": 16,
-          "title": "[IDENTITY] Refresh token",
+          "number": 70,
+          "title": "[AI-ENGINE] Registro da decisão do treinador sobre a sugestão",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/16"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/70"
         }
       ],
       "recentlyCreated": [
@@ -174,34 +174,34 @@
       "releases": [],
       "inProgress": [
         {
-          "number": 40,
-          "title": "[SETTINGS] Configurações",
+          "number": 22,
+          "title": "[ATHLETES] Histórico do atleta (linha do tempo)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/40"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/22"
         },
         {
-          "number": 43,
-          "title": "[SETTINGS] Preferências de notificação",
+          "number": 21,
+          "title": "[ATHLETES] Tela de perfil do atleta",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/21"
         },
         {
-          "number": 42,
-          "title": "[SETTINGS] Integrações conectadas",
+          "number": 20,
+          "title": "[ATHLETES] Cadastro/convite de atleta",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/20"
         },
         {
-          "number": 41,
-          "title": "[SETTINGS] Perfil do treinador/assessoria",
+          "number": 19,
+          "title": "[ATHLETES] Listagem de atletas (busca/filtro)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/19"
         },
         {
-          "number": 36,
-          "title": "[AI-INSIGHTS] Painel de sugestões de IA",
+          "number": 17,
+          "title": "[DASHBOARD] Widget de treinos do dia/semana",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/36"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/17"
         }
       ],
       "recentlyCreated": [

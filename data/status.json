@@ -1,76 +1,76 @@
 {
-  "generatedAt": "2026-08-12T23:57:06.765Z",
+  "generatedAt": "2026-08-13T02:04:21.905Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 30,
-      "closedIssues": 24,
+      "openIssues": 25,
+      "closedIssues": 29,
       "openPRs": 0,
-      "closedRatio": 44,
+      "closedRatio": 54,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
         {
-          "number": 54,
-          "title": "[REFACTOR] Camada de serviço — Frigorifico acessando ProdutoFrigorificoRepository/PendenciaFrigorificoRepository direto",
+          "number": 22,
+          "title": "[BACKEND] CRUD de Planos (admin interno) + seed de planos padrão",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/54"
+          "url": "https://github.com/kevinDsousa/Servora/issues/22"
         },
         {
-          "number": 53,
-          "title": "[REFACTOR] Camada de serviço — Conf (árvore de permissões) acessando Repository de outro nível direto",
+          "number": 14,
+          "title": "[BANCO] Migrations — Domínio de Mídia (Album, Midia, MidiaMetadata, Upload, StorageUsage, DownloadHistory)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/53"
+          "url": "https://github.com/kevinDsousa/Servora/issues/14"
         },
         {
-          "number": 52,
-          "title": "[REFACTOR] Camada de serviço — Personalizados acessando Repository de outro domínio direto",
+          "number": 13,
+          "title": "[BANCO] Migrations — Domínio de Eventos (Evento, Convite, SessaoConvidado)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/52"
+          "url": "https://github.com/kevinDsousa/Servora/issues/13"
         },
         {
-          "number": 51,
-          "title": "[REFACTOR] Camada de serviço — UsuarioServiceImpl acessando PerfilRepository/EmpresaRepository direto",
+          "number": 12,
+          "title": "[BANCO] Migrations — Domínio de Planos (Plano, PlanoFeature, Assinatura)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/51"
+          "url": "https://github.com/kevinDsousa/Servora/issues/12"
         },
         {
-          "number": 50,
-          "title": "[REFACTOR] Dívida técnica — Services acessando Repository de outro domínio direto",
+          "number": 11,
+          "title": "[BANCO] Migrations — MacroModulo Memories + extensão Usuario/Empresa para OAuth",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/50"
+          "url": "https://github.com/kevinDsousa/Servora/issues/11"
         }
       ],
       "recentlyCreated": [
         {
           "number": 54,
           "title": "[REFACTOR] Camada de serviço — Frigorifico acessando ProdutoFrigorificoRepository/PendenciaFrigorificoRepository direto",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Servora/issues/54"
         },
         {
           "number": 53,
           "title": "[REFACTOR] Camada de serviço — Conf (árvore de permissões) acessando Repository de outro nível direto",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Servora/issues/53"
         },
         {
           "number": 52,
           "title": "[REFACTOR] Camada de serviço — Personalizados acessando Repository de outro domínio direto",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Servora/issues/52"
         },
         {
           "number": 51,
           "title": "[REFACTOR] Camada de serviço — UsuarioServiceImpl acessando PerfilRepository/EmpresaRepository direto",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Servora/issues/51"
         },
         {
           "number": 50,
           "title": "[REFACTOR] Dívida técnica — Services acessando Repository de outro domínio direto",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Servora/issues/50"
         }
       ]
@@ -106,28 +106,28 @@
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/13"
         },
         {
-          "number": 12,
-          "title": "[IDENTITY] Autenticação e controle de acesso",
+          "number": 14,
+          "title": "[IDENTITY] Cadastro de usuário",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/12"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/14"
         },
         {
-          "number": 71,
-          "title": "[ADMIN] Administração da plataforma",
+          "number": 19,
+          "title": "[IDENTITY] Confirmação de e-mail no cadastro",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/71"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/19"
         },
         {
-          "number": 75,
-          "title": "[ADMIN] Métricas administrativas",
+          "number": 18,
+          "title": "[IDENTITY] Recuperação e redefinição de senha",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/75"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/18"
         },
         {
-          "number": 74,
-          "title": "[ADMIN] Configuração de integrações habilitadas",
+          "number": 17,
+          "title": "[IDENTITY] Autorização por role (method security)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/74"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/17"
         }
       ],
       "recentlyCreated": [

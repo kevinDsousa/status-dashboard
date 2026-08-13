@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T02:04:21.905Z",
+  "generatedAt": "2026-08-13T04:20:23.329Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 64,
-      "closedIssues": 11,
+      "openIssues": 63,
+      "closedIssues": 12,
       "openPRs": 1,
-      "closedRatio": 15,
+      "closedRatio": 16,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -99,12 +99,6 @@
         }
       ],
       "inProgress": [
-        {
-          "number": 13,
-          "title": "[IDENTITY] Entidade User + enum Role e configuração do Spring Security",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/13"
-        },
         {
           "number": 14,
           "title": "[IDENTITY] Cadastro de usuário",
@@ -128,6 +122,12 @@
           "title": "[IDENTITY] Autorização por role (method security)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/17"
+        },
+        {
+          "number": 16,
+          "title": "[IDENTITY] Refresh token",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/16"
         }
       ],
       "recentlyCreated": [

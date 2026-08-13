@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T11:10:33.637Z",
+  "generatedAt": "2026-08-13T11:59:08.729Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -174,34 +174,34 @@
       "releases": [],
       "inProgress": [
         {
-          "number": 22,
-          "title": "[ATHLETES] Histórico do atleta (linha do tempo)",
+          "number": 43,
+          "title": "[SETTINGS] Preferências de notificação",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/22"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
         },
         {
-          "number": 21,
-          "title": "[ATHLETES] Tela de perfil do atleta",
+          "number": 42,
+          "title": "[SETTINGS] Integrações conectadas",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/21"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
         },
         {
-          "number": 20,
-          "title": "[ATHLETES] Cadastro/convite de atleta",
+          "number": 41,
+          "title": "[SETTINGS] Perfil do treinador/assessoria",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/20"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
         },
         {
-          "number": 19,
-          "title": "[ATHLETES] Listagem de atletas (busca/filtro)",
+          "number": 39,
+          "title": "[AI-INSIGHTS] Histórico de decisões",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/19"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
         },
         {
-          "number": 17,
-          "title": "[DASHBOARD] Widget de treinos do dia/semana",
+          "number": 38,
+          "title": "[AI-INSIGHTS] Tela de aprovação/rejeição",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/17"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/38"
         }
       ],
       "recentlyCreated": [
@@ -248,12 +248,6 @@
       "releases": [],
       "inProgress": [
         {
-          "number": 34,
-          "title": "[PROFILE] Perfil do atleta",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/34"
-        },
-        {
           "number": 38,
           "title": "[PROFILE] Atalho para gerenciar dispositivos conectados",
           "state": "OPEN",
@@ -276,6 +270,12 @@
           "title": "[PROFILE] Edição de dados físicos e objetivos",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/35"
+        },
+        {
+          "number": 33,
+          "title": "[AI-COACH] Histórico de sugestões recebidas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Mobile/issues/33"
         }
       ],
       "recentlyCreated": [

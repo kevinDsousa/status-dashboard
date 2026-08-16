@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T21:57:22.055Z",
+  "generatedAt": "2026-08-16T22:23:00.051Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -388,13 +388,19 @@
     {
       "owner": "kevinDsousa",
       "name": "reserva-facil-front",
-      "openIssues": 28,
-      "closedIssues": 3,
+      "openIssues": 27,
+      "closedIssues": 4,
       "openPRs": 0,
-      "closedRatio": 10,
+      "closedRatio": 13,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
+        {
+          "number": 14,
+          "title": "[SEGURANÇA][ALTO] Guards de rota confiam em localStorage gravável (bypass de UI admin)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/14"
+        },
         {
           "number": 31,
           "title": "[REFATORAÇÃO] Migrar *ngFor legado remanescente para @for",
@@ -418,12 +424,6 @@
           "title": "[REFATORAÇÃO] Ampliar cobertura de testes dos services de domínio (0% hoje)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/28"
-        },
-        {
-          "number": 27,
-          "title": "[REFATORAÇÃO] Unificar diretivas de validação mortas/divergentes (CPF, senha)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/reserva-facil-front/issues/27"
         }
       ],
       "recentlyCreated": [

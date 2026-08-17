@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T14:00:52.974Z",
+  "generatedAt": "2026-08-17T14:43:09.963Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -166,76 +166,7 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 43,
-      "closedIssues": 0,
-      "openPRs": 0,
-      "closedRatio": 0,
-      "latestRelease": null,
-      "releases": [],
-      "inProgress": [
-        {
-          "number": 43,
-          "title": "[SETTINGS] Preferências de notificação",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
-        },
-        {
-          "number": 42,
-          "title": "[SETTINGS] Integrações conectadas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
-        },
-        {
-          "number": 41,
-          "title": "[SETTINGS] Perfil do treinador/assessoria",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
-        },
-        {
-          "number": 39,
-          "title": "[AI-INSIGHTS] Histórico de decisões",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
-        },
-        {
-          "number": 38,
-          "title": "[AI-INSIGHTS] Tela de aprovação/rejeição",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/38"
-        }
-      ],
-      "recentlyCreated": [
-        {
-          "number": 43,
-          "title": "[SETTINGS] Preferências de notificação",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
-        },
-        {
-          "number": 42,
-          "title": "[SETTINGS] Integrações conectadas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
-        },
-        {
-          "number": 41,
-          "title": "[SETTINGS] Perfil do treinador/assessoria",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
-        },
-        {
-          "number": 40,
-          "title": "[SETTINGS] Configurações",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/40"
-        },
-        {
-          "number": 39,
-          "title": "[AI-INSIGHTS] Histórico de decisões",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
-        }
-      ]
+      "error": "kevinDsousa/Pite-Frontend: HTTP 503"
     },
     {
       "owner": "kevinDsousa",
@@ -622,14 +553,7 @@
     {
       "owner": "kevinDsousa",
       "name": "ImobiSim",
-      "openIssues": 0,
-      "closedIssues": 0,
-      "openPRs": 0,
-      "closedRatio": null,
-      "latestRelease": null,
-      "releases": [],
-      "inProgress": [],
-      "recentlyCreated": []
+      "error": "kevinDsousa/ImobiSim: HTTP 503"
     }
   ]
 }

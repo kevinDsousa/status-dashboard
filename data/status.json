@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T11:49:32.405Z",
+  "generatedAt": "2026-08-17T12:36:20.217Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -388,10 +388,10 @@
     {
       "owner": "kevinDsousa",
       "name": "reserva-facil-front",
-      "openIssues": 20,
-      "closedIssues": 11,
+      "openIssues": 19,
+      "closedIssues": 12,
       "openPRs": 0,
-      "closedRatio": 35,
+      "closedRatio": 39,
       "latestRelease": null,
       "releases": [],
       "inProgress": [

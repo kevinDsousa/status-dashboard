@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T17:44:04.852Z",
+  "generatedAt": "2026-08-17T18:13:12.262Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -166,7 +166,76 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "error": "kevinDsousa/Pite-Frontend: HTTP 503"
+      "openIssues": 43,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": 0,
+      "latestRelease": null,
+      "releases": [],
+      "inProgress": [
+        {
+          "number": 43,
+          "title": "[SETTINGS] Preferências de notificação",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
+        },
+        {
+          "number": 42,
+          "title": "[SETTINGS] Integrações conectadas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
+        },
+        {
+          "number": 41,
+          "title": "[SETTINGS] Perfil do treinador/assessoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
+        },
+        {
+          "number": 39,
+          "title": "[AI-INSIGHTS] Histórico de decisões",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
+        },
+        {
+          "number": 38,
+          "title": "[AI-INSIGHTS] Tela de aprovação/rejeição",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/38"
+        }
+      ],
+      "recentlyCreated": [
+        {
+          "number": 43,
+          "title": "[SETTINGS] Preferências de notificação",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/43"
+        },
+        {
+          "number": 42,
+          "title": "[SETTINGS] Integrações conectadas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
+        },
+        {
+          "number": 41,
+          "title": "[SETTINGS] Perfil do treinador/assessoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
+        },
+        {
+          "number": 40,
+          "title": "[SETTINGS] Configurações",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/40"
+        },
+        {
+          "number": 39,
+          "title": "[AI-INSIGHTS] Histórico de decisões",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
+        }
+      ]
     },
     {
       "owner": "kevinDsousa",
@@ -393,7 +462,76 @@
     {
       "owner": "kevinDsousa",
       "name": "IntegraFlux-Api",
-      "error": "kevinDsousa/IntegraFlux-Api: HTTP 503"
+      "openIssues": 14,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": 0,
+      "latestRelease": null,
+      "releases": [],
+      "inProgress": [
+        {
+          "number": 14,
+          "title": "[Dívida técnica] JwtService reprocessa/reassina o token várias vezes por requisição",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/14"
+        },
+        {
+          "number": 13,
+          "title": "[Dívida técnica] GlobalExceptionHandler não trata exceções comuns do Spring MVC (caem como 500 genérico)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/13"
+        },
+        {
+          "number": 12,
+          "title": "[Dívida técnica] TenantContextHolder usa InheritableThreadLocal, incompatível com o pool @Async da Auditoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/12"
+        },
+        {
+          "number": 11,
+          "title": "[Dívida técnica] User.java usa Lombok @Data, que expõe passwordHash em toString()",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/11"
+        },
+        {
+          "number": 10,
+          "title": "[Segurança] Rotação de refresh token não detecta reuso de token já revogado",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/10"
+        }
+      ],
+      "recentlyCreated": [
+        {
+          "number": 14,
+          "title": "[Dívida técnica] JwtService reprocessa/reassina o token várias vezes por requisição",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/14"
+        },
+        {
+          "number": 13,
+          "title": "[Dívida técnica] GlobalExceptionHandler não trata exceções comuns do Spring MVC (caem como 500 genérico)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/13"
+        },
+        {
+          "number": 12,
+          "title": "[Dívida técnica] TenantContextHolder usa InheritableThreadLocal, incompatível com o pool @Async da Auditoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/12"
+        },
+        {
+          "number": 11,
+          "title": "[Dívida técnica] User.java usa Lombok @Data, que expõe passwordHash em toString()",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/11"
+        },
+        {
+          "number": 10,
+          "title": "[Segurança] Rotação de refresh token não detecta reuso de token já revogado",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/IntegraFlux-Api/issues/10"
+        }
+      ]
     },
     {
       "owner": "kevinDsousa",
@@ -484,7 +622,14 @@
     {
       "owner": "kevinDsousa",
       "name": "ImobiSim",
-      "error": "kevinDsousa/ImobiSim: HTTP 503"
+      "openIssues": 0,
+      "closedIssues": 0,
+      "openPRs": 0,
+      "closedRatio": null,
+      "latestRelease": null,
+      "releases": [],
+      "inProgress": [],
+      "recentlyCreated": []
     }
   ]
 }

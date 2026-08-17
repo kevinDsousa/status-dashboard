@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-17T21:59:12.570Z",
+  "generatedAt": "2026-08-17T22:31:04.936Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 25,
-      "closedIssues": 29,
+      "openIssues": 23,
+      "closedIssues": 31,
       "openPRs": 0,
-      "closedRatio": 54,
+      "closedRatio": 57,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
@@ -30,16 +30,16 @@
           "url": "https://github.com/kevinDsousa/Servora/issues/13"
         },
         {
-          "number": 12,
-          "title": "[BANCO] Migrations — Domínio de Planos (Plano, PlanoFeature, Assinatura)",
+          "number": 35,
+          "title": "[ROADMAP] Servora Memories V1/V2 — IA, integrações externas, domínio personalizado, notificações reais",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/12"
+          "url": "https://github.com/kevinDsousa/Servora/issues/35"
         },
         {
-          "number": 11,
-          "title": "[BANCO] Migrations — MacroModulo Memories + extensão Usuario/Empresa para OAuth",
+          "number": 34,
+          "title": "[DOCS] Coleção .http — todos os endpoints da API Memories",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/11"
+          "url": "https://github.com/kevinDsousa/Servora/issues/34"
         }
       ],
       "recentlyCreated": [

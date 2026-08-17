@@ -1,33 +1,27 @@
 {
-  "generatedAt": "2026-08-17T22:31:04.936Z",
+  "generatedAt": "2026-08-17T22:59:32.488Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 23,
-      "closedIssues": 31,
+      "openIssues": 21,
+      "closedIssues": 33,
       "openPRs": 0,
-      "closedRatio": 57,
+      "closedRatio": 61,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
+        {
+          "number": 15,
+          "title": "[BACKEND] Entidades JPA — Planos e Assinatura",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/15"
+        },
         {
           "number": 22,
           "title": "[BACKEND] CRUD de Planos (admin interno) + seed de planos padrão",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Servora/issues/22"
-        },
-        {
-          "number": 14,
-          "title": "[BANCO] Migrations — Domínio de Mídia (Album, Midia, MidiaMetadata, Upload, StorageUsage, DownloadHistory)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/14"
-        },
-        {
-          "number": 13,
-          "title": "[BANCO] Migrations — Domínio de Eventos (Evento, Convite, SessaoConvidado)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/13"
         },
         {
           "number": 35,
@@ -40,6 +34,12 @@
           "title": "[DOCS] Coleção .http — todos os endpoints da API Memories",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Servora/issues/34"
+        },
+        {
+          "number": 33,
+          "title": "[TESTES] Casos de teste — Fluxo de convidado e upload",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/33"
         }
       ],
       "recentlyCreated": [

@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-17T23:49:24.123Z",
+  "generatedAt": "2026-08-18T01:00:41.910Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 21,
-      "closedIssues": 33,
+      "openIssues": 17,
+      "closedIssues": 37,
       "openPRs": 0,
-      "closedRatio": 61,
+      "closedRatio": 69,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
         {
-          "number": 15,
-          "title": "[BACKEND] Entidades JPA — Planos e Assinatura",
+          "number": 19,
+          "title": "[BACKEND] Seed e validação do Perfil \"Organizador Memories\"",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/15"
+          "url": "https://github.com/kevinDsousa/Servora/issues/19"
         },
         {
           "number": 22,

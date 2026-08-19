@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-19T01:01:36.213Z",
+  "generatedAt": "2026-08-19T02:31:26.061Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 16,
-      "closedIssues": 38,
+      "openIssues": 14,
+      "closedIssues": 40,
       "openPRs": 0,
-      "closedRatio": 70,
+      "closedRatio": 74,
       "latestRelease": null,
       "releases": [],
       "inProgress": [

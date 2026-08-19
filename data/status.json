@@ -1,22 +1,16 @@
 {
-  "generatedAt": "2026-08-18T23:45:46.451Z",
+  "generatedAt": "2026-08-19T01:01:36.213Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 17,
-      "closedIssues": 37,
+      "openIssues": 16,
+      "closedIssues": 38,
       "openPRs": 0,
-      "closedRatio": 69,
+      "closedRatio": 70,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
-        {
-          "number": 19,
-          "title": "[BACKEND] Seed e validação do Perfil \"Organizador Memories\"",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/19"
-        },
         {
           "number": 22,
           "title": "[BACKEND] CRUD de Planos (admin interno) + seed de planos padrão",
@@ -40,6 +34,12 @@
           "title": "[TESTES] Casos de teste — Fluxo de convidado e upload",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Servora/issues/33"
+        },
+        {
+          "number": 32,
+          "title": "[TESTES] Casos de teste — Planos e limites de uso",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/32"
         }
       ],
       "recentlyCreated": [

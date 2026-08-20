@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-20T01:25:02.079Z",
+  "generatedAt": "2026-08-20T02:35:33.647Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 10,
-      "closedIssues": 44,
+      "openIssues": 9,
+      "closedIssues": 45,
       "openPRs": 0,
-      "closedRatio": 81,
+      "closedRatio": 83,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
         {
-          "number": 26,
-          "title": "[BACKEND] Abstração de Storage (StorageProvider) + implementação MinIO",
+          "number": 27,
+          "title": "[BACKEND] Upload de mídia — endpoint + validação de limites do plano",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/26"
+          "url": "https://github.com/kevinDsousa/Servora/issues/27"
         },
         {
           "number": 35,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T21:52:40.988Z",
+  "generatedAt": "2026-08-20T22:23:10.446Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -100,6 +100,12 @@
       ],
       "inProgress": [
         {
+          "number": 14,
+          "title": "[IDENTITY] Cadastro de usuário",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/14"
+        },
+        {
           "number": 75,
           "title": "[ADMIN] Métricas administrativas",
           "state": "OPEN",
@@ -122,12 +128,6 @@
           "title": "[ADMIN] Gestão de usuários (listar/bloquear/alterar role)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/72"
-        },
-        {
-          "number": 70,
-          "title": "[AI-ENGINE] Registro da decisão do treinador sobre a sugestão",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/70"
         }
       ],
       "recentlyCreated": [

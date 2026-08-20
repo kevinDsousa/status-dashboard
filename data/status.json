@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-19T23:58:00.203Z",
+  "generatedAt": "2026-08-20T01:25:02.079Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 14,
-      "closedIssues": 40,
+      "openIssues": 10,
+      "closedIssues": 44,
       "openPRs": 0,
-      "closedRatio": 74,
+      "closedRatio": 81,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
         {
-          "number": 22,
-          "title": "[BACKEND] CRUD de Planos (admin interno) + seed de planos padrão",
+          "number": 26,
+          "title": "[BACKEND] Abstração de Storage (StorageProvider) + implementação MinIO",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/22"
+          "url": "https://github.com/kevinDsousa/Servora/issues/26"
         },
         {
           "number": 35,

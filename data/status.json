@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-20T22:23:10.446Z",
+  "generatedAt": "2026-08-20T22:54:09.488Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 9,
-      "closedIssues": 45,
+      "openIssues": 19,
+      "closedIssues": 46,
       "openPRs": 0,
-      "closedRatio": 83,
+      "closedRatio": 71,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
         {
-          "number": 27,
-          "title": "[BACKEND] Upload de mídia — endpoint + validação de limites do plano",
+          "number": 64,
+          "title": "[TESTES] Testes de controller e segurança (MockMvc) — API REST e Memories",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/27"
+          "url": "https://github.com/kevinDsousa/Servora/issues/64"
         },
         {
-          "number": 35,
-          "title": "[ROADMAP] Servora Memories V1/V2 — IA, integrações externas, domínio personalizado, notificações reais",
+          "number": 63,
+          "title": "[BACKEND] Limites de tamanho de upload (multipart) alinhados ao plano",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/35"
+          "url": "https://github.com/kevinDsousa/Servora/issues/63"
         },
         {
-          "number": 34,
-          "title": "[DOCS] Coleção .http — todos os endpoints da API Memories",
+          "number": 62,
+          "title": "[BACKEND] Mascaramento de dados sensíveis (@Sensitive) no módulo Memories",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/34"
+          "url": "https://github.com/kevinDsousa/Servora/issues/62"
         },
         {
-          "number": 33,
-          "title": "[TESTES] Casos de teste — Fluxo de convidado e upload",
+          "number": 61,
+          "title": "[BACKEND] Verificação de e-mail no cadastro local do Memories",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/33"
+          "url": "https://github.com/kevinDsousa/Servora/issues/61"
         },
         {
-          "number": 32,
-          "title": "[TESTES] Casos de teste — Planos e limites de uso",
+          "number": 60,
+          "title": "[REFACTOR] Centralizar mensagens de exceção em MensagensMemories + remover duplicação em PlanoServiceImpl",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/32"
+          "url": "https://github.com/kevinDsousa/Servora/issues/60"
         }
       ],
       "recentlyCreated": [
         {
-          "number": 54,
-          "title": "[REFACTOR] Camada de serviço — Frigorifico acessando ProdutoFrigorificoRepository/PendenciaFrigorificoRepository direto",
+          "number": 65,
+          "title": "TESTE TEMP - apagar",
           "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Servora/issues/54"
+          "url": "https://github.com/kevinDsousa/Servora/issues/65"
         },
         {
-          "number": 53,
-          "title": "[REFACTOR] Camada de serviço — Conf (árvore de permissões) acessando Repository de outro nível direto",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Servora/issues/53"
+          "number": 64,
+          "title": "[TESTES] Testes de controller e segurança (MockMvc) — API REST e Memories",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/64"
         },
         {
-          "number": 52,
-          "title": "[REFACTOR] Camada de serviço — Personalizados acessando Repository de outro domínio direto",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Servora/issues/52"
+          "number": 63,
+          "title": "[BACKEND] Limites de tamanho de upload (multipart) alinhados ao plano",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/63"
         },
         {
-          "number": 51,
-          "title": "[REFACTOR] Camada de serviço — UsuarioServiceImpl acessando PerfilRepository/EmpresaRepository direto",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Servora/issues/51"
+          "number": 62,
+          "title": "[BACKEND] Mascaramento de dados sensíveis (@Sensitive) no módulo Memories",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/62"
         },
         {
-          "number": 50,
-          "title": "[REFACTOR] Dívida técnica — Services acessando Repository de outro domínio direto",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Servora/issues/50"
+          "number": 61,
+          "title": "[BACKEND] Verificação de e-mail no cadastro local do Memories",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/61"
         }
       ]
     },
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 63,
+      "openIssues": 67,
       "closedIssues": 12,
       "openPRs": 1,
-      "closedRatio": 16,
+      "closedRatio": 15,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,66 +100,66 @@
       ],
       "inProgress": [
         {
+          "number": 80,
+          "title": "[INFRA] Cobertura de teste: PiteBackendApplication.main",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/80"
+        },
+        {
+          "number": 79,
+          "title": "[INFRA] Cobertura de teste: MinioHealthIndicator (UP/DOWN)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/79"
+        },
+        {
+          "number": 78,
+          "title": "[INFRA] Cobertura de teste: MinioBucketInitializer (caminho de erro)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/78"
+        },
+        {
+          "number": 77,
+          "title": "[INFRA] Cobertura de teste: GlobalExceptionHandler.handleEmailAlreadyInUse",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/77"
+        },
+        {
           "number": 14,
           "title": "[IDENTITY] Cadastro de usuário",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/14"
-        },
-        {
-          "number": 75,
-          "title": "[ADMIN] Métricas administrativas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/75"
-        },
-        {
-          "number": 74,
-          "title": "[ADMIN] Configuração de integrações habilitadas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/74"
-        },
-        {
-          "number": 73,
-          "title": "[ADMIN] Estrutura inicial de planos/assinaturas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/73"
-        },
-        {
-          "number": 72,
-          "title": "[ADMIN] Gestão de usuários (listar/bloquear/alterar role)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/72"
         }
       ],
       "recentlyCreated": [
         {
+          "number": 80,
+          "title": "[INFRA] Cobertura de teste: PiteBackendApplication.main",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/80"
+        },
+        {
+          "number": 79,
+          "title": "[INFRA] Cobertura de teste: MinioHealthIndicator (UP/DOWN)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/79"
+        },
+        {
+          "number": 78,
+          "title": "[INFRA] Cobertura de teste: MinioBucketInitializer (caminho de erro)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/78"
+        },
+        {
+          "number": 77,
+          "title": "[INFRA] Cobertura de teste: GlobalExceptionHandler.handleEmailAlreadyInUse",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/77"
+        },
+        {
           "number": 75,
           "title": "[ADMIN] Métricas administrativas",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/75"
-        },
-        {
-          "number": 74,
-          "title": "[ADMIN] Configuração de integrações habilitadas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/74"
-        },
-        {
-          "number": 73,
-          "title": "[ADMIN] Estrutura inicial de planos/assinaturas",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/73"
-        },
-        {
-          "number": 72,
-          "title": "[ADMIN] Gestão de usuários (listar/bloquear/alterar role)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/72"
-        },
-        {
-          "number": 71,
-          "title": "[ADMIN] Administração da plataforma",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/71"
         }
       ]
     },

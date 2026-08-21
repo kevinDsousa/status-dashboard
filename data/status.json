@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T23:49:43.525Z",
+  "generatedAt": "2026-08-21T01:04:23.839Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -100,6 +100,12 @@
       ],
       "inProgress": [
         {
+          "number": 14,
+          "title": "[IDENTITY] Cadastro de usuário",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/14"
+        },
+        {
           "number": 80,
           "title": "[INFRA] Cobertura de teste: PiteBackendApplication.main",
           "state": "OPEN",
@@ -122,12 +128,6 @@
           "title": "[INFRA] Cobertura de teste: GlobalExceptionHandler.handleEmailAlreadyInUse",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/77"
-        },
-        {
-          "number": 14,
-          "title": "[IDENTITY] Cadastro de usuário",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/14"
         }
       ],
       "recentlyCreated": [

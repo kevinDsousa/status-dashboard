@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-22T19:45:03.557Z",
+  "generatedAt": "2026-08-22T19:59:27.395Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 13,
-      "closedIssues": 52,
+      "openIssues": 12,
+      "closedIssues": 53,
       "openPRs": 0,
-      "closedRatio": 80,
+      "closedRatio": 82,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
         {
-          "number": 33,
-          "title": "[TESTES] Casos de teste — Fluxo de convidado e upload",
+          "number": 34,
+          "title": "[DOCS] Coleção .http — todos os endpoints da API Memories",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/33"
+          "url": "https://github.com/kevinDsousa/Servora/issues/34"
         },
         {
           "number": 64,

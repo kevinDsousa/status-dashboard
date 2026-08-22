@@ -1,16 +1,22 @@
 {
-  "generatedAt": "2026-08-22T18:57:17.789Z",
+  "generatedAt": "2026-08-22T19:23:23.838Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 14,
-      "closedIssues": 51,
+      "openIssues": 13,
+      "closedIssues": 52,
       "openPRs": 0,
-      "closedRatio": 78,
+      "closedRatio": 80,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
+        {
+          "number": 33,
+          "title": "[TESTES] Casos de teste — Fluxo de convidado e upload",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/33"
+        },
         {
           "number": 64,
           "title": "[TESTES] Testes de controller e segurança (MockMvc) — API REST e Memories",
@@ -34,12 +40,6 @@
           "title": "[BACKEND] Verificação de e-mail no cadastro local do Memories",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Servora/issues/61"
-        },
-        {
-          "number": 60,
-          "title": "[REFACTOR] Centralizar mensagens de exceção em MensagensMemories + remover duplicação em PlanoServiceImpl",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/60"
         }
       ],
       "recentlyCreated": [

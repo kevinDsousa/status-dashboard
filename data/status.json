@@ -1,16 +1,22 @@
 {
-  "generatedAt": "2026-08-22T17:27:49.998Z",
+  "generatedAt": "2026-08-22T17:48:00.566Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 16,
-      "closedIssues": 49,
+      "openIssues": 15,
+      "closedIssues": 50,
       "openPRs": 0,
-      "closedRatio": 75,
+      "closedRatio": 77,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
+        {
+          "number": 31,
+          "title": "[BACKEND] Notificações por e-mail — templates HTML (upload/espaço/evento encerrando)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/31"
+        },
         {
           "number": 64,
           "title": "[TESTES] Testes de controller e segurança (MockMvc) — API REST e Memories",
@@ -34,12 +40,6 @@
           "title": "[BACKEND] Verificação de e-mail no cadastro local do Memories",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Servora/issues/61"
-        },
-        {
-          "number": 60,
-          "title": "[REFACTOR] Centralizar mensagens de exceção em MensagensMemories + remover duplicação em PlanoServiceImpl",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/60"
         }
       ],
       "recentlyCreated": [

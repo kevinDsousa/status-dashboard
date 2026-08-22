@@ -1,22 +1,16 @@
 {
-  "generatedAt": "2026-08-22T16:59:33.546Z",
+  "generatedAt": "2026-08-22T17:27:49.998Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 18,
-      "closedIssues": 47,
+      "openIssues": 16,
+      "closedIssues": 49,
       "openPRs": 0,
-      "closedRatio": 72,
+      "closedRatio": 75,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
-        {
-          "number": 28,
-          "title": "[BACKEND] Processamento assíncrono de mídia — thumbnail, EXIF, hash de duplicidade",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/28"
-        },
         {
           "number": 64,
           "title": "[TESTES] Testes de controller e segurança (MockMvc) — API REST e Memories",
@@ -40,6 +34,12 @@
           "title": "[BACKEND] Verificação de e-mail no cadastro local do Memories",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Servora/issues/61"
+        },
+        {
+          "number": 60,
+          "title": "[REFACTOR] Centralizar mensagens de exceção em MensagensMemories + remover duplicação em PlanoServiceImpl",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/60"
         }
       ],
       "recentlyCreated": [

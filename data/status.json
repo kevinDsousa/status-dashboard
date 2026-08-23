@@ -1,22 +1,16 @@
 {
-  "generatedAt": "2026-08-22T23:58:45.974Z",
+  "generatedAt": "2026-08-23T01:45:57.600Z",
   "repos": [
     {
       "owner": "kevinDsousa",
       "name": "Servora",
-      "openIssues": 9,
-      "closedIssues": 56,
+      "openIssues": 5,
+      "closedIssues": 60,
       "openPRs": 0,
-      "closedRatio": 86,
+      "closedRatio": 92,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
-        {
-          "number": 56,
-          "title": "[BACKEND] Segurança — Respostas JSON de erro nas APIs REST (GlobalExceptionHandler vaza HTML)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/56"
-        },
         {
           "number": 64,
           "title": "[TESTES] Testes de controller e segurança (MockMvc) — API REST e Memories",
@@ -36,10 +30,16 @@
           "url": "https://github.com/kevinDsousa/Servora/issues/62"
         },
         {
-          "number": 61,
-          "title": "[BACKEND] Verificação de e-mail no cadastro local do Memories",
+          "number": 55,
+          "title": "[ROADMAP] Qualidade e Segurança — Revisão transversal (2026-08-20)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Servora/issues/61"
+          "url": "https://github.com/kevinDsousa/Servora/issues/55"
+        },
+        {
+          "number": 35,
+          "title": "[ROADMAP] Servora Memories V1/V2 — IA, integrações externas, domínio personalizado, notificações reais",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Servora/issues/35"
         }
       ],
       "recentlyCreated": [
@@ -70,7 +70,7 @@
         {
           "number": 61,
           "title": "[BACKEND] Verificação de e-mail no cadastro local do Memories",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Servora/issues/61"
         }
       ]

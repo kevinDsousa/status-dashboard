@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T23:48:28.945Z",
+  "generatedAt": "2026-08-26T01:04:27.666Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 66,
-      "closedIssues": 13,
+      "openIssues": 65,
+      "closedIssues": 14,
       "openPRs": 1,
-      "closedRatio": 16,
+      "closedRatio": 18,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,10 +100,10 @@
       ],
       "inProgress": [
         {
-          "number": 15,
-          "title": "[IDENTITY] Login + emissão de JWT",
+          "number": 16,
+          "title": "[IDENTITY] Refresh token",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/15"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/16"
         },
         {
           "number": 80,

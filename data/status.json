@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T21:39:47.004Z",
+  "generatedAt": "2026-08-27T01:04:00.187Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 62,
-      "closedIssues": 17,
+      "openIssues": 73,
+      "closedIssues": 18,
       "openPRs": 1,
-      "closedRatio": 22,
+      "closedRatio": 20,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,66 +100,66 @@
       ],
       "inProgress": [
         {
-          "number": 19,
-          "title": "[IDENTITY] Confirmação de e-mail no cadastro",
+          "number": 81,
+          "title": "[SEGURANÇA] Refresh tokens e tokens de reset de senha armazenados em texto puro no banco",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/19"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/81"
         },
         {
-          "number": 80,
-          "title": "[INFRA] Cobertura de teste: PiteBackendApplication.main",
+          "number": 92,
+          "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/80"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/92"
         },
         {
-          "number": 79,
-          "title": "[INFRA] Cobertura de teste: MinioHealthIndicator (UP/DOWN)",
+          "number": 91,
+          "title": "[MELHORIA] Uso inconsistente de @Transactional (jakarta vs Spring) entre serviços do módulo",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/79"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/91"
         },
         {
-          "number": 78,
-          "title": "[INFRA] Cobertura de teste: MinioBucketInitializer (caminho de erro)",
+          "number": 90,
+          "title": "[MELHORIA] Configuração de CORS duplicada (WebMvcConfigurer + CorsConfigurationSource)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/78"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/90"
         },
         {
-          "number": 77,
-          "title": "[INFRA] Cobertura de teste: GlobalExceptionHandler.handleEmailAlreadyInUse",
+          "number": 89,
+          "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/77"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
         }
       ],
       "recentlyCreated": [
         {
-          "number": 80,
-          "title": "[INFRA] Cobertura de teste: PiteBackendApplication.main",
+          "number": 92,
+          "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/80"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/92"
         },
         {
-          "number": 79,
-          "title": "[INFRA] Cobertura de teste: MinioHealthIndicator (UP/DOWN)",
+          "number": 91,
+          "title": "[MELHORIA] Uso inconsistente de @Transactional (jakarta vs Spring) entre serviços do módulo",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/79"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/91"
         },
         {
-          "number": 78,
-          "title": "[INFRA] Cobertura de teste: MinioBucketInitializer (caminho de erro)",
+          "number": 90,
+          "title": "[MELHORIA] Configuração de CORS duplicada (WebMvcConfigurer + CorsConfigurationSource)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/78"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/90"
         },
         {
-          "number": 77,
-          "title": "[INFRA] Cobertura de teste: GlobalExceptionHandler.handleEmailAlreadyInUse",
+          "number": 89,
+          "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/77"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
         },
         {
-          "number": 75,
-          "title": "[ADMIN] Métricas administrativas",
+          "number": 88,
+          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/75"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T17:34:36.845Z",
+  "generatedAt": "2026-08-29T01:09:30.032Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 73,
-      "closedIssues": 18,
+      "openIssues": 71,
+      "closedIssues": 20,
       "openPRs": 1,
-      "closedRatio": 20,
+      "closedRatio": 22,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,22 +100,16 @@
       ],
       "inProgress": [
         {
-          "number": 81,
-          "title": "[SEGURANÇA] Refresh tokens e tokens de reset de senha armazenados em texto puro no banco",
+          "number": 91,
+          "title": "[MELHORIA] Uso inconsistente de @Transactional (jakarta vs Spring) entre serviços do módulo",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/81"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/91"
         },
         {
           "number": 92,
           "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/92"
-        },
-        {
-          "number": 91,
-          "title": "[MELHORIA] Uso inconsistente de @Transactional (jakarta vs Spring) entre serviços do módulo",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/91"
         },
         {
           "number": 90,
@@ -128,6 +122,12 @@
           "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
+        },
+        {
+          "number": 88,
+          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
         }
       ],
       "recentlyCreated": [

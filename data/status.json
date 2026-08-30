@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T15:20:13.453Z",
+  "generatedAt": "2026-08-30T18:42:10.696Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 71,
-      "closedIssues": 20,
+      "openIssues": 67,
+      "closedIssues": 24,
       "openPRs": 1,
-      "closedRatio": 22,
+      "closedRatio": 26,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,10 +100,16 @@
       ],
       "inProgress": [
         {
-          "number": 91,
-          "title": "[MELHORIA] Uso inconsistente de @Transactional (jakarta vs Spring) entre serviços do módulo",
+          "number": 23,
+          "title": "[ATHLETE] Objetivos do atleta (Goal)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/91"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/23"
+        },
+        {
+          "number": 20,
+          "title": "[ATHLETE] Perfil do atleta",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/20"
         },
         {
           "number": 92,
@@ -122,12 +128,6 @@
           "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
-        },
-        {
-          "number": 88,
-          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
         }
       ],
       "recentlyCreated": [
@@ -140,7 +140,7 @@
         {
           "number": 91,
           "title": "[MELHORIA] Uso inconsistente de @Transactional (jakarta vs Spring) entre serviços do módulo",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/91"
         },
         {

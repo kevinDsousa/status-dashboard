@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T18:42:10.696Z",
+  "generatedAt": "2026-08-30T21:35:36.756Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 67,
-      "closedIssues": 24,
+      "openIssues": 49,
+      "closedIssues": 42,
       "openPRs": 1,
-      "closedRatio": 26,
+      "closedRatio": 46,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,16 +100,10 @@
       ],
       "inProgress": [
         {
-          "number": 23,
-          "title": "[ATHLETE] Objetivos do atleta (Goal)",
+          "number": 41,
+          "title": "[WORKOUT] Endpoint de calendário por período",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/23"
-        },
-        {
-          "number": 20,
-          "title": "[ATHLETE] Perfil do atleta",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/20"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/41"
         },
         {
           "number": 92,
@@ -128,6 +122,12 @@
           "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
+        },
+        {
+          "number": 88,
+          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
         }
       ],
       "recentlyCreated": [

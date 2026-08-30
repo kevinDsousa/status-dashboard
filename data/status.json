@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T21:35:36.756Z",
+  "generatedAt": "2026-08-30T23:53:06.149Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 49,
-      "closedIssues": 42,
+      "openIssues": 43,
+      "closedIssues": 48,
       "openPRs": 1,
-      "closedRatio": 46,
+      "closedRatio": 53,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -99,12 +99,6 @@
         }
       ],
       "inProgress": [
-        {
-          "number": 41,
-          "title": "[WORKOUT] Endpoint de calendário por período",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/41"
-        },
         {
           "number": 92,
           "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
@@ -128,6 +122,12 @@
           "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
+        },
+        {
+          "number": 87,
+          "title": "[MELHORIA] Tokens de redefinição de senha expirados/usados nunca são limpos",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/87"
         }
       ],
       "recentlyCreated": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T11:57:21.619Z",
+  "generatedAt": "2026-09-01T16:14:39.702Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -79,9 +79,9 @@
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
       "openIssues": 29,
-      "closedIssues": 62,
+      "closedIssues": 66,
       "openPRs": 1,
-      "closedRatio": 68,
+      "closedRatio": 69,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -132,34 +132,34 @@
       ],
       "recentlyCreated": [
         {
+          "number": 96,
+          "title": "[Segurança] Redis sem autenticação em produção",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/96"
+        },
+        {
+          "number": 95,
+          "title": "[Segurança] JWT secret fraco ativado por padrão em ambiente dev",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/95"
+        },
+        {
+          "number": 94,
+          "title": "[Segurança] IDOR em endpoints de coach (team ownership não verificado)",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/94"
+        },
+        {
+          "number": 93,
+          "title": "[Segurança] IDOR em /workout-sessions/{id}, /reports/{id} e /activities/{id}/fit-file",
+          "state": "CLOSED",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/93"
+        },
+        {
           "number": 92,
           "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/92"
-        },
-        {
-          "number": 91,
-          "title": "[MELHORIA] Uso inconsistente de @Transactional (jakarta vs Spring) entre serviços do módulo",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/91"
-        },
-        {
-          "number": 90,
-          "title": "[MELHORIA] Configuração de CORS duplicada (WebMvcConfigurer + CorsConfigurationSource)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/90"
-        },
-        {
-          "number": 89,
-          "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
-        },
-        {
-          "number": 88,
-          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
         }
       ]
     },

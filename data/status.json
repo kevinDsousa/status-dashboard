@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T22:01:05.802Z",
+  "generatedAt": "2026-09-01T01:17:31.651Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 43,
-      "closedIssues": 48,
+      "openIssues": 30,
+      "closedIssues": 61,
       "openPRs": 1,
-      "closedRatio": 53,
+      "closedRatio": 67,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,6 +100,18 @@
       ],
       "inProgress": [
         {
+          "number": 60,
+          "title": "[INTEGRATION] StravaConnector (OAuth + importação)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/60"
+        },
+        {
+          "number": 57,
+          "title": "[INTEGRATION] Integrações externas",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/57"
+        },
+        {
           "number": 92,
           "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
           "state": "OPEN",
@@ -116,18 +128,6 @@
           "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
-        },
-        {
-          "number": 88,
-          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
-        },
-        {
-          "number": 87,
-          "title": "[MELHORIA] Tokens de redefinição de senha expirados/usados nunca são limpos",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/87"
         }
       ],
       "recentlyCreated": [

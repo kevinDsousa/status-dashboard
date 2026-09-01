@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T06:30:20.382Z",
+  "generatedAt": "2026-09-01T11:57:21.619Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 30,
-      "closedIssues": 61,
+      "openIssues": 29,
+      "closedIssues": 62,
       "openPRs": 1,
-      "closedRatio": 67,
+      "closedRatio": 68,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -99,12 +99,6 @@
         }
       ],
       "inProgress": [
-        {
-          "number": 60,
-          "title": "[INTEGRATION] StravaConnector (OAuth + importação)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/60"
-        },
         {
           "number": 57,
           "title": "[INTEGRATION] Integrações externas",
@@ -128,6 +122,12 @@
           "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
+        },
+        {
+          "number": 88,
+          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
         }
       ],
       "recentlyCreated": [

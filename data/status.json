@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T23:45:39.469Z",
+  "generatedAt": "2026-09-02T02:41:42.952Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 29,
-      "closedIssues": 66,
+      "openIssues": 21,
+      "closedIssues": 74,
       "openPRs": 1,
-      "closedRatio": 69,
+      "closedRatio": 78,
       "latestRelease": {
         "tagName": "v0.1.0",
         "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -100,10 +100,10 @@
       ],
       "inProgress": [
         {
-          "number": 57,
-          "title": "[INTEGRATION] Integrações externas",
+          "number": 64,
+          "title": "[AI-ENGINE] Serviço de inteligência artificial",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/57"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/64"
         },
         {
           "number": 92,

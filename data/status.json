@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T21:57:12.541Z",
+  "generatedAt": "2026-09-02T23:54:02.799Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,18 +78,25 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 21,
-      "closedIssues": 74,
+      "openIssues": 18,
+      "closedIssues": 77,
       "openPRs": 1,
-      "closedRatio": 78,
+      "closedRatio": 81,
       "latestRelease": {
-        "tagName": "v0.1.0",
-        "name": "v0.1.0 — Fundação do projeto Spring Boot",
-        "description": "## Checkpoint: fim do módulo `[INFRA] Fundação do projeto Spring Boot` (#1)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API — marca apenas que o módulo de fundação (issues #2 a #11) está concluído. Nenhum domínio de negócio (Identity, Athlete, Workout etc.) existe ainda.\n\n### O que entra nessa versão\n\n- **Estrutura do projeto**: Maven, Java 21, Spring Boot 4.1.0, empacotamento por domínio (#2).\n- **Docker Compose**: Postgres + Redis + MinIO + app, com healthchecks e portas configuráveis via `.env` (#3).\n- **PostgreSQL + Flyway**: `ddl-auto=validate` em todos os profiles, migrations versionadas (#4).\n- **Cache Redis**: `RedisCacheManager` + `@EnableCaching`, convenção de nome/TTL documentada (#5).\n- **MinIO**: `StorageService` genérico (upload/download/delete/presignedUrl), buckets iniciais criados automaticamente (#6).\n- **Tratamento de erro global**: `ApiError` padronizado, `GlobalExceptionHandler` cobrindo 404/400/403/500 (#7).\n- **Profiles `dev`/`prod`**: variáveis de ambiente, sem credencial hardcoded, CORS por ambiente (#8).\n- **OpenAPI/Swagger**: documentação automática em `/swagger-ui/index.html`, versionamento `/api/v1` (#9).\n- **CI/CD**: build + testes + Testcontainers + lint como gates obrigatórios em todo push/PR (#10).\n- **Healthcheck + logging estruturado**: `/actuator/health` (Postgres/Redis/MinIO), logging via [trilha-log](https://github.com/trilha-log/trilha-log) com `traceId` de correlação por requisição (#11).\n\n### Limitações conhecidas\n\n- **Endpoints exigem HTTP Basic Auth por padrão** (senha aleatória gerada no boot), inclusive `/swagger-ui`, `/v3/api-docs` e rotas inexistentes (que deveriam devolver 404, hoje devolvem 401). Isso é o comportamento padrão do Spring Security sem um `SecurityFilterChain` customizado — só `/actuator/health` é liberado publicamente pela autoconfiguração do Actuator. Fica resolvido quando o épico `[IDENTITY]` (autenticação real) for implementado.\n- **Proteção de branch em `main`** não pôde ser configurada — GitHub bloqueia essa feature (branch protection/rulesets) para repositórios privados em contas Free (exige upgrade para Pro/Team, ou tornar o repositório público).\n\n### Como rodar\n\nVer `README.md` — `docker compose up -d --build` (com `.env` configurado, incluindo `GITHUB_ACTOR`/`GITHUB_TOKEN` para resolver o `trilha-log` do GitHub Packages).\n",
-        "publishedAt": "2026-08-12T02:04:36Z",
-        "url": "https://github.com/kevinDsousa/Pite-Backend/releases/tag/v0.1.0"
+        "tagName": "v0.10.0",
+        "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",
+        "description": "## O que há de novo\n\n### [AI-ENGINE] Serviço de Inteligência Artificial (#64)\nMódulo completo de análise automática do histórico do atleta com fluxo de aprovação humana pelo treinador.\n\n- **#65** Estrutura do AI Service e contrato de entrada/saída (`AthleteTrainingSnapshot`, `TrainingSuggestion`, `TrainingAnalysisEngine`)\n- **#66** Coleta de features do histórico do atleta (`FeatureCollectionService` — volume, ritmo, sono, RPE dos últimos 28 dias)\n- **#67** Análise de fadiga/overtraining baseada em regras (`RuleBasedTrainingAnalysisEngine`)\n- **#68** Geração e persistência de sugestões (`AiSuggestion` com status PENDING/APPROVED/REJECTED)\n- **#69** `GET /coach/ai-suggestions` — lista sugestões pendentes dos atletas vinculados ao treinador\n- **#70** `PATCH /coach/ai-suggestions/{id}/decide` — treinador aprova ou rejeita com justificativa; decisão definitiva via `CoachAccessGuard`\n\n### [INTEGRATION] Integrações Externas (#57)\n- **#58** Módulo integration-service e interface ActivityImportConnector\n- **#59** GarminConnector — OAuth + importação de atividades\n- **#60** StravaConnector — OAuth + importação de atividades\n- **#61** TrainingPeaksConnector (esqueleto)\n- **#62** AppleHealthConnector (esqueleto)\n- **#63** Importação de atividade externa para Activity\n\n### [SECURITY] Auditoria e correções de segurança\n- **#93** @OwnershipRequired — verificação de ownership declarativa\n- **#94** IDOR corrigido em endpoints de coach\n- **#95** JWT secret fraco removido — guard em produção\n- **#96** Redis exige autenticação em produção\n\n---\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "publishedAt": "2026-09-02T23:23:42Z",
+        "url": "https://github.com/kevinDsousa/Pite-Backend/releases/tag/v0.10.0"
       },
       "releases": [
+        {
+          "tagName": "v0.10.0",
+          "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",
+          "description": "## O que há de novo\n\n### [AI-ENGINE] Serviço de Inteligência Artificial (#64)\nMódulo completo de análise automática do histórico do atleta com fluxo de aprovação humana pelo treinador.\n\n- **#65** Estrutura do AI Service e contrato de entrada/saída (`AthleteTrainingSnapshot`, `TrainingSuggestion`, `TrainingAnalysisEngine`)\n- **#66** Coleta de features do histórico do atleta (`FeatureCollectionService` — volume, ritmo, sono, RPE dos últimos 28 dias)\n- **#67** Análise de fadiga/overtraining baseada em regras (`RuleBasedTrainingAnalysisEngine`)\n- **#68** Geração e persistência de sugestões (`AiSuggestion` com status PENDING/APPROVED/REJECTED)\n- **#69** `GET /coach/ai-suggestions` — lista sugestões pendentes dos atletas vinculados ao treinador\n- **#70** `PATCH /coach/ai-suggestions/{id}/decide` — treinador aprova ou rejeita com justificativa; decisão definitiva via `CoachAccessGuard`\n\n### [INTEGRATION] Integrações Externas (#57)\n- **#58** Módulo integration-service e interface ActivityImportConnector\n- **#59** GarminConnector — OAuth + importação de atividades\n- **#60** StravaConnector — OAuth + importação de atividades\n- **#61** TrainingPeaksConnector (esqueleto)\n- **#62** AppleHealthConnector (esqueleto)\n- **#63** Importação de atividade externa para Activity\n\n### [SECURITY] Auditoria e correções de segurança\n- **#93** @OwnershipRequired — verificação de ownership declarativa\n- **#94** IDOR corrigido em endpoints de coach\n- **#95** JWT secret fraco removido — guard em produção\n- **#96** Redis exige autenticação em produção\n\n---\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+          "publishedAt": "2026-09-02T23:23:42Z",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/releases/tag/v0.10.0"
+        },
         {
           "tagName": "v0.1.0",
           "name": "v0.1.0 — Fundação do projeto Spring Boot",
@@ -99,12 +106,6 @@
         }
       ],
       "inProgress": [
-        {
-          "number": 64,
-          "title": "[AI-ENGINE] Serviço de inteligência artificial",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/64"
-        },
         {
           "number": 92,
           "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
@@ -128,6 +129,12 @@
           "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
+        },
+        {
+          "number": 87,
+          "title": "[MELHORIA] Tokens de redefinição de senha expirados/usados nunca são limpos",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/87"
         }
       ],
       "recentlyCreated": [

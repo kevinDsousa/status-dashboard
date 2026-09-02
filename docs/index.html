@@ -144,12 +144,12 @@
   <div class="page">
     <header>
       <h1>Status dos projetos</h1>
-      <span class="generated">atualizado 2026-09-02 21:57 UTC</span>
+      <span class="generated">atualizado 2026-09-02 23:54 UTC</span>
     </header>
     
     <div class="stat-row">
-      <div class="stat-tile"><span class="num">194</span><span class="label">issues abertas no total</span></div>
-      <div class="stat-tile good"><span class="num">188</span><span class="label">issues fechadas no total</span></div>
+      <div class="stat-tile"><span class="num">191</span><span class="label">issues abertas no total</span></div>
+      <div class="stat-tile good"><span class="num">191</span><span class="label">issues fechadas no total</span></div>
       <div class="stat-tile good"><span class="num">1</span><span class="label">repositórios com release</span></div>
       <div class="stat-tile"><span class="num">1</span><span class="label">PRs abertos no total</span></div>
     </div>
@@ -217,26 +217,22 @@
       </div>
     </div>
   </div>
-<div class="project-card" data-health="saudavel" data-search="pite-backend #64 [ai-engine] servico de inteligencia artificial #92 [melhoria] authcontroller.refresh nao segue o padrao de responsedto usado por register/login #90 [melhoria] configuracao de cors duplicada (webmvcconfigurer + corsconfigurationsource) #89 [seguranca] sem server.forward-headers-strategy configurado em producao (hsts nunca aplicado atras de proxy) #88 [seguranca] /actuator/health expoe detalhe de infraestrutura sem autenticacao #96 [seguranca] redis sem autenticacao em producao #95 [seguranca] jwt secret fraco ativado por padrao em ambiente dev #94 [seguranca] idor em endpoints de coach (team ownership nao verificado) #93 [seguranca] idor em /workout-sessions/{id}, /reports/{id} e /activities/{id}/fit-file">
+<div class="project-card" data-health="saudavel" data-search="pite-backend #92 [melhoria] authcontroller.refresh nao segue o padrao de responsedto usado por register/login #90 [melhoria] configuracao de cors duplicada (webmvcconfigurer + corsconfigurationsource) #89 [seguranca] sem server.forward-headers-strategy configurado em producao (hsts nunca aplicado atras de proxy) #88 [seguranca] /actuator/health expoe detalhe de infraestrutura sem autenticacao #87 [melhoria] tokens de redefinicao de senha expirados/usados nunca sao limpos #96 [seguranca] redis sem autenticacao em producao #95 [seguranca] jwt secret fraco ativado por padrao em ambiente dev #94 [seguranca] idor em endpoints de coach (team ownership nao verificado) #93 [seguranca] idor em /workout-sessions/{id}, /reports/{id} e /activities/{id}/fit-file">
     <div class="project-head">
       <span class="project-name">Pite-Backend</span>
-      <span class="version-chip">v0.1.0</span>
+      <span class="version-chip">v0.10.0</span>
     </div>
     <div class="project-stats">
-      <div><b>21</b>abertas</div>
-      <div><b>74</b>fechadas</div>
+      <div><b>18</b>abertas</div>
+      <div><b>77</b>fechadas</div>
       <div><b>1</b>PRs abertos</div>
     </div>
-    <div class="health-bar-track"><div class="health-bar-fill" style="width: 78%; background: var(--good);"></div></div>
-    <div class="health-caption"><span>78% fechadas</span><span>saudável</span></div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 81%; background: var(--good);"></div></div>
+    <div class="health-caption"><span>81% fechadas</span><span>saudável</span></div>
     <div class="issue-columns">
       <div class="issue-column">
         <p class="issue-column-label">Atualizadas recentemente</p>
         <div class="link-row">
-    <span class="issue-id">#64</span>
-    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Backend/issues/64" target="_blank" rel="noopener">[AI-ENGINE] Serviço de inteligência artificial</a>
-    <span class="status-chip open">aberta</span>
-  </div><div class="link-row">
     <span class="issue-id">#92</span>
     <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Backend/issues/92" target="_blank" rel="noopener">[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login</a>
     <span class="status-chip open">aberta</span>
@@ -251,6 +247,10 @@
   </div><div class="link-row">
     <span class="issue-id">#88</span>
     <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Backend/issues/88" target="_blank" rel="noopener">[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#87</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Backend/issues/87" target="_blank" rel="noopener">[MELHORIA] Tokens de redefinição de senha expirados/usados nunca são limpos</a>
     <span class="status-chip open">aberta</span>
   </div>
       </div>
@@ -710,6 +710,43 @@
       <h2>Releases recentes</h2>
       <div class="release-list">
         <div class="release-item">
+    <div class="release-head">
+      <span class="release-repo">Pite-Backend</span>
+      <span class="version-chip">v0.10.0</span>
+      <span class="release-title">v0.10.0 — AI Engine, Integrações Externas e Segurança</span>
+      <span class="release-date">2026-09-02</span>
+    </div>
+    <div class="release-notes">## O que há de novo
+
+### [AI-ENGINE] Serviço de Inteligência Artificial (#64)
+Módulo completo de análise automática do histórico do atleta com fluxo de aprovação humana pelo treinador.
+
+- **#65** Estrutura do AI Service e contrato de entrada/saída (`AthleteTrainingSnapshot`, `TrainingSuggestion`, `TrainingAnalysisEngine`)
+- **#66** Coleta de features do histórico do atleta (`FeatureCollectionService` — volume, ritmo, sono, RPE dos últimos 28 dias)
+- **#67** Análise de fadiga/overtraining baseada em regras (`RuleBasedTrainingAnalysisEngine`)
+- **#68** Geração e persistência de sugestões (`AiSuggestion` com status PENDING/APPROVED/REJECTED)
+- **#69** `GET /coach/ai-suggestions` — lista sugestões pendentes dos atletas vinculados ao treinador
+- **#70** `PATCH /coach/ai-suggestions/{id}/decide` — treinador aprova ou rejeita com justificativa; decisão definitiva via `CoachAccessGuard`
+
+### [INTEGRATION] Integrações Externas (#57)
+- **#58** Módulo integration-service e interface ActivityImportConnector
+- **#59** GarminConnector — OAuth + importação de atividades
+- **#60** StravaConnector — OAuth + importação de atividades
+- **#61** TrainingPeaksConnector (esqueleto)
+- **#62** AppleHealthConnector (esqueleto)
+- **#63** Importação de atividade externa para Activity
+
+### [SECURITY] Auditoria e correções de segurança
+- **#93** @OwnershipRequired — verificação de ownership declarativa
+- **#94** IDOR corrigido em endpoints de coach
+- **#95** JWT secret fraco removido — guard em produção
+- **#96** Redis exige autenticação em produção
+
+---
+🤖 Generated with [Claude Code](https://claude.com/claude-code)</div>
+    <a class="release-link" href="https://github.com/kevinDsousa/Pite-Backend/releases/tag/v0.10.0" target="_blank" rel="noopener">ver release completa →</a>
+  </div>
+<div class="release-item">
     <div class="release-head">
       <span class="release-repo">Pite-Backend</span>
       <span class="version-chip">v0.1.0</span>

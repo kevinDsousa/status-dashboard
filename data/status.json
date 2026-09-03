@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T21:49:11.803Z",
+  "generatedAt": "2026-09-03T23:45:45.947Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 17,
-      "closedIssues": 78,
+      "openIssues": 15,
+      "closedIssues": 80,
       "openPRs": 1,
-      "closedRatio": 82,
+      "closedRatio": 84,
       "latestRelease": {
         "tagName": "v0.10.0",
         "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",

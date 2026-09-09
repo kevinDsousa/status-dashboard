@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T05:58:21.481Z",
+  "generatedAt": "2026-09-09T11:01:35.308Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 9,
-      "closedIssues": 86,
+      "openIssues": 0,
+      "closedIssues": 95,
       "openPRs": 1,
-      "closedRatio": 91,
+      "closedRatio": 100,
       "latestRelease": {
         "tagName": "v0.10.0",
         "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",
@@ -105,38 +105,7 @@
           "url": "https://github.com/kevinDsousa/Pite-Backend/releases/tag/v0.1.0"
         }
       ],
-      "inProgress": [
-        {
-          "number": 92,
-          "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/92"
-        },
-        {
-          "number": 90,
-          "title": "[MELHORIA] Configuração de CORS duplicada (WebMvcConfigurer + CorsConfigurationSource)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/90"
-        },
-        {
-          "number": 89,
-          "title": "[SEGURANÇA] Sem server.forward-headers-strategy configurado em produção (HSTS nunca aplicado atrás de proxy)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/89"
-        },
-        {
-          "number": 88,
-          "title": "[SEGURANÇA] /actuator/health expõe detalhe de infraestrutura sem autenticação",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/88"
-        },
-        {
-          "number": 87,
-          "title": "[MELHORIA] Tokens de redefinição de senha expirados/usados nunca são limpos",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/87"
-        }
-      ],
+      "inProgress": [],
       "recentlyCreated": [
         {
           "number": 96,
@@ -165,7 +134,7 @@
         {
           "number": 92,
           "title": "[MELHORIA] AuthController.refresh não segue o padrão de ResponseDTO usado por register/login",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/92"
         }
       ]

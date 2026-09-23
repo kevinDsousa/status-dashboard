@@ -144,13 +144,13 @@
   <div class="page">
     <header>
       <h1>Status dos projetos</h1>
-      <span class="generated">atualizado 2026-09-23 13:51 UTC</span>
+      <span class="generated">atualizado 2026-09-23 18:13 UTC</span>
     </header>
     
     <div class="stat-row">
-      <div class="stat-tile"><span class="num">167</span><span class="label">issues abertas no total</span></div>
-      <div class="stat-tile good"><span class="num">215</span><span class="label">issues fechadas no total</span></div>
-      <div class="stat-tile good"><span class="num">1</span><span class="label">repositórios com release</span></div>
+      <div class="stat-tile"><span class="num">160</span><span class="label">issues abertas no total</span></div>
+      <div class="stat-tile good"><span class="num">222</span><span class="label">issues fechadas no total</span></div>
+      <div class="stat-tile good"><span class="num">2</span><span class="label">repositórios com release</span></div>
       <div class="stat-tile"><span class="num">1</span><span class="label">PRs abertos no total</span></div>
     </div>
     <div class="project-grid">
@@ -260,26 +260,22 @@
       </div>
     </div>
   </div>
-<div class="project-card" data-health="parado" data-search="pite-frontend #1 [infra] fundacao do projeto angular #43 [settings] preferencias de notificacao #42 [settings] integracoes conectadas #41 [settings] perfil do treinador/assessoria #39 [ai-insights] historico de decisoes #40 [settings] configuracoes">
+<div class="project-card" data-health="acumulando" data-search="pite-frontend #43 [settings] preferencias de notificacao #42 [settings] integracoes conectadas #41 [settings] perfil do treinador/assessoria #39 [ai-insights] historico de decisoes #38 [ai-insights] tela de aprovacao/rejeicao #40 [settings] configuracoes">
     <div class="project-head">
       <span class="project-name">Pite-Frontend</span>
-      <span class="version-chip">sem release</span>
+      <span class="version-chip">v0.1.0</span>
     </div>
     <div class="project-stats">
-      <div><b>37</b>abertas</div>
-      <div><b>6</b>fechadas</div>
+      <div><b>30</b>abertas</div>
+      <div><b>13</b>fechadas</div>
       <div><b>0</b>PRs abertos</div>
     </div>
-    <div class="health-bar-track"><div class="health-bar-fill" style="width: 14%; background: var(--critical);"></div></div>
-    <div class="health-caption"><span>14% fechadas</span><span>parado</span></div>
+    <div class="health-bar-track"><div class="health-bar-fill" style="width: 30%; background: var(--warning);"></div></div>
+    <div class="health-caption"><span>30% fechadas</span><span>acumulando</span></div>
     <div class="issue-columns">
       <div class="issue-column">
         <p class="issue-column-label">Atualizadas recentemente</p>
         <div class="link-row">
-    <span class="issue-id">#1</span>
-    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Frontend/issues/1" target="_blank" rel="noopener">[INFRA] Fundação do projeto Angular</a>
-    <span class="status-chip open">aberta</span>
-  </div><div class="link-row">
     <span class="issue-id">#43</span>
     <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Frontend/issues/43" target="_blank" rel="noopener">[SETTINGS] Preferências de notificação</a>
     <span class="status-chip open">aberta</span>
@@ -294,6 +290,10 @@
   </div><div class="link-row">
     <span class="issue-id">#39</span>
     <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Frontend/issues/39" target="_blank" rel="noopener">[AI-INSIGHTS] Histórico de decisões</a>
+    <span class="status-chip open">aberta</span>
+  </div><div class="link-row">
+    <span class="issue-id">#38</span>
+    <a class="issue-title" href="https://github.com/kevinDsousa/Pite-Frontend/issues/38" target="_blank" rel="noopener">[AI-INSIGHTS] Tela de aprovação/rejeição</a>
     <span class="status-chip open">aberta</span>
   </div>
       </div>
@@ -690,6 +690,43 @@
       <h2>Releases recentes</h2>
       <div class="release-list">
         <div class="release-item">
+    <div class="release-head">
+      <span class="release-repo">Pite-Frontend</span>
+      <span class="version-chip">v0.1.0</span>
+      <span class="release-title">v0.1.0 — Fundação do projeto Angular</span>
+      <span class="release-date">2026-09-23</span>
+    </div>
+    <div class="release-notes">## Checkpoint: fim do módulo `[INFRA] Fundação do projeto Angular` (#1)
+
+Versão **pré-1.0**, sem garantia de estabilidade de API — marca apenas que o módulo de fundação (issues #2 a #8) está concluído. Nenhuma tela real de negócio existe ainda (login, dashboard, atletas, etc.) além do necessário pra validar a infraestrutura.
+
+### O que entra nessa versão
+
+- **Setup Angular CLI + estrutura por feature**: standalone components, `src/app/core` (transversal) e `src/app/shared` (UI reutilizável) (#2).
+- **Environments + proxy de API**: `environment.ts`/`environment.prod.ts` via `fileReplacements`, proxy de dev pra `/api/*` evitando CORS (#3).
+- **Design system base**: tema via CSS custom properties, componentes `Button`/`InputField`/`Card` signal-based em `shared/ui` (#4).
+- **HTTP client + interceptors**: `authInterceptor` injeta `Authorization: Bearer`, `errorInterceptor` normaliza erros no formato `ApiError` e faz logout automático em 401 (#5).
+- **Roteamento + lazy loading por módulo**: rota raiz com `loadChildren` por feature, cada módulo isolado em seu próprio chunk (#6).
+- **Guards de autenticação/role**: `authGuard` e `roleGuard` (fábrica) protegendo todas as rotas exceto `/login` (#7).
+- **Pipeline CI/CD**: lint + testes (headless, Vitest) + build de produção como gates obrigatórios em todo push/PR pra `main` (#8).
+
+### Limitações conhecidas
+
+- **Nenhuma feature de negócio implementada** — as rotas de cada módulo (`dashboard`, `athletes`, `workouts`, `calendar`, `analytics`, `ai-insights`, `settings`) apontam pra componentes placeholder até as respectivas issues de feature serem feitas.
+- **Runner de testes é Vitest, não Karma** — algumas issues do backlog foram desenhadas assumindo Karma/Jasmine (`ChromeHeadless`, `jasmine.createSpyObj`, `toBeTrue()`); adaptado pra Vitest em cada issue implementada, com o desvio documentado no commit/comentário de fechamento correspondente.
+- **`AuthService.login` fixa `role: &#39;COACH&#39;`** no `CurrentUser`, porque a resposta de `/auth/login` do backend ainda não devolve o role do usuário — ajuste natural quando esse dado existir.
+
+### Como rodar
+
+```
+npm ci
+npm start
+```
+
+Backend precisa estar rodando em `http://localhost:8080` (proxy configurado em `proxy.conf.json`).</div>
+    <a class="release-link" href="https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.1.0" target="_blank" rel="noopener">ver release completa →</a>
+  </div>
+<div class="release-item">
     <div class="release-head">
       <span class="release-repo">Pite-Backend</span>
       <span class="version-chip">v0.10.0</span>

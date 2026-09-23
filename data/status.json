@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T13:51:29.792Z",
+  "generatedAt": "2026-09-23T18:13:17.440Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -142,19 +142,27 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 37,
-      "closedIssues": 6,
+      "openIssues": 30,
+      "closedIssues": 13,
       "openPRs": 0,
-      "closedRatio": 14,
-      "latestRelease": null,
-      "releases": [],
-      "inProgress": [
+      "closedRatio": 30,
+      "latestRelease": {
+        "tagName": "v0.1.0",
+        "name": "v0.1.0 — Fundação do projeto Angular",
+        "description": "## Checkpoint: fim do módulo `[INFRA] Fundação do projeto Angular` (#1)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API — marca apenas que o módulo de fundação (issues #2 a #8) está concluído. Nenhuma tela real de negócio existe ainda (login, dashboard, atletas, etc.) além do necessário pra validar a infraestrutura.\n\n### O que entra nessa versão\n\n- **Setup Angular CLI + estrutura por feature**: standalone components, `src/app/core` (transversal) e `src/app/shared` (UI reutilizável) (#2).\n- **Environments + proxy de API**: `environment.ts`/`environment.prod.ts` via `fileReplacements`, proxy de dev pra `/api/*` evitando CORS (#3).\n- **Design system base**: tema via CSS custom properties, componentes `Button`/`InputField`/`Card` signal-based em `shared/ui` (#4).\n- **HTTP client + interceptors**: `authInterceptor` injeta `Authorization: Bearer`, `errorInterceptor` normaliza erros no formato `ApiError` e faz logout automático em 401 (#5).\n- **Roteamento + lazy loading por módulo**: rota raiz com `loadChildren` por feature, cada módulo isolado em seu próprio chunk (#6).\n- **Guards de autenticação/role**: `authGuard` e `roleGuard` (fábrica) protegendo todas as rotas exceto `/login` (#7).\n- **Pipeline CI/CD**: lint + testes (headless, Vitest) + build de produção como gates obrigatórios em todo push/PR pra `main` (#8).\n\n### Limitações conhecidas\n\n- **Nenhuma feature de negócio implementada** — as rotas de cada módulo (`dashboard`, `athletes`, `workouts`, `calendar`, `analytics`, `ai-insights`, `settings`) apontam pra componentes placeholder até as respectivas issues de feature serem feitas.\n- **Runner de testes é Vitest, não Karma** — algumas issues do backlog foram desenhadas assumindo Karma/Jasmine (`ChromeHeadless`, `jasmine.createSpyObj`, `toBeTrue()`); adaptado pra Vitest em cada issue implementada, com o desvio documentado no commit/comentário de fechamento correspondente.\n- **`AuthService.login` fixa `role: 'COACH'`** no `CurrentUser`, porque a resposta de `/auth/login` do backend ainda não devolve o role do usuário — ajuste natural quando esse dado existir.\n\n### Como rodar\n\n```\nnpm ci\nnpm start\n```\n\nBackend precisa estar rodando em `http://localhost:8080` (proxy configurado em `proxy.conf.json`).\n",
+        "publishedAt": "2026-09-23T16:43:47Z",
+        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.1.0"
+      },
+      "releases": [
         {
-          "number": 1,
-          "title": "[INFRA] Fundação do projeto Angular",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/1"
-        },
+          "tagName": "v0.1.0",
+          "name": "v0.1.0 — Fundação do projeto Angular",
+          "description": "## Checkpoint: fim do módulo `[INFRA] Fundação do projeto Angular` (#1)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API — marca apenas que o módulo de fundação (issues #2 a #8) está concluído. Nenhuma tela real de negócio existe ainda (login, dashboard, atletas, etc.) além do necessário pra validar a infraestrutura.\n\n### O que entra nessa versão\n\n- **Setup Angular CLI + estrutura por feature**: standalone components, `src/app/core` (transversal) e `src/app/shared` (UI reutilizável) (#2).\n- **Environments + proxy de API**: `environment.ts`/`environment.prod.ts` via `fileReplacements`, proxy de dev pra `/api/*` evitando CORS (#3).\n- **Design system base**: tema via CSS custom properties, componentes `Button`/`InputField`/`Card` signal-based em `shared/ui` (#4).\n- **HTTP client + interceptors**: `authInterceptor` injeta `Authorization: Bearer`, `errorInterceptor` normaliza erros no formato `ApiError` e faz logout automático em 401 (#5).\n- **Roteamento + lazy loading por módulo**: rota raiz com `loadChildren` por feature, cada módulo isolado em seu próprio chunk (#6).\n- **Guards de autenticação/role**: `authGuard` e `roleGuard` (fábrica) protegendo todas as rotas exceto `/login` (#7).\n- **Pipeline CI/CD**: lint + testes (headless, Vitest) + build de produção como gates obrigatórios em todo push/PR pra `main` (#8).\n\n### Limitações conhecidas\n\n- **Nenhuma feature de negócio implementada** — as rotas de cada módulo (`dashboard`, `athletes`, `workouts`, `calendar`, `analytics`, `ai-insights`, `settings`) apontam pra componentes placeholder até as respectivas issues de feature serem feitas.\n- **Runner de testes é Vitest, não Karma** — algumas issues do backlog foram desenhadas assumindo Karma/Jasmine (`ChromeHeadless`, `jasmine.createSpyObj`, `toBeTrue()`); adaptado pra Vitest em cada issue implementada, com o desvio documentado no commit/comentário de fechamento correspondente.\n- **`AuthService.login` fixa `role: 'COACH'`** no `CurrentUser`, porque a resposta de `/auth/login` do backend ainda não devolve o role do usuário — ajuste natural quando esse dado existir.\n\n### Como rodar\n\n```\nnpm ci\nnpm start\n```\n\nBackend precisa estar rodando em `http://localhost:8080` (proxy configurado em `proxy.conf.json`).\n",
+          "publishedAt": "2026-09-23T16:43:47Z",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.1.0"
+        }
+      ],
+      "inProgress": [
         {
           "number": 43,
           "title": "[SETTINGS] Preferências de notificação",
@@ -178,6 +186,12 @@
           "title": "[AI-INSIGHTS] Histórico de decisões",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
+        },
+        {
+          "number": 38,
+          "title": "[AI-INSIGHTS] Tela de aprovação/rejeição",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/38"
         }
       ],
       "recentlyCreated": [

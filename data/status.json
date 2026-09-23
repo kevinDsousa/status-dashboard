@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T08:33:09.751Z",
+  "generatedAt": "2026-09-23T13:51:29.792Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -142,10 +142,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 41,
-      "closedIssues": 2,
+      "openIssues": 37,
+      "closedIssues": 6,
       "openPRs": 0,
-      "closedRatio": 5,
+      "closedRatio": 14,
       "latestRelease": null,
       "releases": [],
       "inProgress": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T23:49:11.732Z",
+  "generatedAt": "2026-09-23T03:07:48.305Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -142,13 +142,19 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 43,
-      "closedIssues": 0,
+      "openIssues": 41,
+      "closedIssues": 2,
       "openPRs": 0,
-      "closedRatio": 0,
+      "closedRatio": 5,
       "latestRelease": null,
       "releases": [],
       "inProgress": [
+        {
+          "number": 1,
+          "title": "[INFRA] Fundação do projeto Angular",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/1"
+        },
         {
           "number": 43,
           "title": "[SETTINGS] Preferências de notificação",
@@ -172,12 +178,6 @@
           "title": "[AI-INSIGHTS] Histórico de decisões",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
-        },
-        {
-          "number": 38,
-          "title": "[AI-INSIGHTS] Tela de aprovação/rejeição",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/38"
         }
       ],
       "recentlyCreated": [

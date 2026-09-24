@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T23:57:54.868Z",
+  "generatedAt": "2026-09-24T03:54:46.067Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 2,
-      "closedIssues": 94,
+      "openIssues": 4,
+      "closedIssues": 93,
       "openPRs": 1,
-      "closedRatio": 98,
+      "closedRatio": 96,
       "latestRelease": {
         "tagName": "v0.10.0",
         "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",
@@ -107,6 +107,18 @@
       ],
       "inProgress": [
         {
+          "number": 98,
+          "title": "[TRAINING-PLAN] Status do plano + listagem por atleta",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/98"
+        },
+        {
+          "number": 31,
+          "title": "[TRAINING-PLAN] Planos de treinamento",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/31"
+        },
+        {
           "number": 25,
           "title": "[COACH] Treinador e assessoria",
           "state": "OPEN",
@@ -120,6 +132,12 @@
         }
       ],
       "recentlyCreated": [
+        {
+          "number": 98,
+          "title": "[TRAINING-PLAN] Status do plano + listagem por atleta",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/98"
+        },
         {
           "number": 97,
           "title": "[COACH] Perfil de um atleta específico visto pelo treinador",
@@ -143,30 +161,31 @@
           "title": "[Segurança] IDOR em endpoints de coach (team ownership não verificado)",
           "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/94"
-        },
-        {
-          "number": 93,
-          "title": "[Segurança] IDOR em /workout-sessions/{id}, /reports/{id} e /activities/{id}/fit-file",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/93"
         }
       ]
     },
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 21,
-      "closedIssues": 22,
+      "openIssues": 19,
+      "closedIssues": 24,
       "openPRs": 0,
-      "closedRatio": 51,
+      "closedRatio": 56,
       "latestRelease": {
-        "tagName": "v0.3.0",
-        "name": "v0.3.0 — Dashboard do treinador",
-        "description": "## Checkpoint: fim do módulo `[DASHBOARD] Dashboard do treinador` (#14)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Layout do dashboard e cards de resumo** (#15): grid CSS com cards envolvendo widgets independentes.\n- **Widget de atletas ativos/alertas de IA** (#16): contagem de atletas vinculados + sugestões de IA pendentes, `DashboardService.getSummary` compondo duas chamadas.\n- **Widget de treinos do dia/semana** (#17): lista os treinos planejados da semana atual, com estado vazio.\n\n### Limitações conhecidas\n\n- `GET /coach/teams/me/athletes` é placeholder — falta um jeito do frontend descobrir o `teamId` do treinador logado no backend.\n- Não existe endpoint agregado de treinos por vários atletas — o widget de treinos usa um `athleteId` fixo de placeholder até essa decisão de arquitetura (agregação no cliente vs. endpoint novo no backend) ser tomada.\n",
-        "publishedAt": "2026-09-23T23:26:50Z",
-        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.3.0"
+        "tagName": "v0.4.0",
+        "name": "v0.4.0 — Gestão de atletas",
+        "description": "## Checkpoint: fim do módulo `[ATHLETES] Gestão de atletas` (#18)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Listagem de atletas** (#19): busca client-side por e-mail, badge de perfil incompleto.\n- **Cadastro/convite de atleta** (#20): convite por `athleteId`, mensagem específica pra convite duplicado (409).\n- **Tela de perfil do atleta** (#21): dados físicos e nível de experiência de um atleta específico.\n- **Histórico do atleta** (#22): linha do tempo de atividades paginada (server-side), integrada como seção da tela de perfil.\n\n### Limitações conhecidas\n\n- `teamId` fixo como placeholder em várias telas — falta um endpoint \"meu time principal\" no backend pro frontend descobrir o time do treinador logado.\n- `GET /coach/athletes/{athleteId}` não existe no backend ainda ([Pite-Backend#97](https://github.com/kevinDsousa/Pite-Backend/issues/97)) — a tela de perfil roda a chamada mas não retorna dado real até essa issue ser implementada.\n",
+        "publishedAt": "2026-09-24T00:07:23Z",
+        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.4.0"
       },
       "releases": [
+        {
+          "tagName": "v0.4.0",
+          "name": "v0.4.0 — Gestão de atletas",
+          "description": "## Checkpoint: fim do módulo `[ATHLETES] Gestão de atletas` (#18)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Listagem de atletas** (#19): busca client-side por e-mail, badge de perfil incompleto.\n- **Cadastro/convite de atleta** (#20): convite por `athleteId`, mensagem específica pra convite duplicado (409).\n- **Tela de perfil do atleta** (#21): dados físicos e nível de experiência de um atleta específico.\n- **Histórico do atleta** (#22): linha do tempo de atividades paginada (server-side), integrada como seção da tela de perfil.\n\n### Limitações conhecidas\n\n- `teamId` fixo como placeholder em várias telas — falta um endpoint \"meu time principal\" no backend pro frontend descobrir o time do treinador logado.\n- `GET /coach/athletes/{athleteId}` não existe no backend ainda ([Pite-Backend#97](https://github.com/kevinDsousa/Pite-Backend/issues/97)) — a tela de perfil roda a chamada mas não retorna dado real até essa issue ser implementada.\n",
+          "publishedAt": "2026-09-24T00:07:23Z",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.4.0"
+        },
         {
           "tagName": "v0.3.0",
           "name": "v0.3.0 — Dashboard do treinador",
@@ -191,6 +210,12 @@
       ],
       "inProgress": [
         {
+          "number": 23,
+          "title": "[WORKOUTS] Gestão de treinos",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/23"
+        },
+        {
           "number": 43,
           "title": "[SETTINGS] Preferências de notificação",
           "state": "OPEN",
@@ -213,12 +238,6 @@
           "title": "[AI-INSIGHTS] Histórico de decisões",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
-        },
-        {
-          "number": 38,
-          "title": "[AI-INSIGHTS] Tela de aprovação/rejeição",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/38"
         }
       ],
       "recentlyCreated": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T03:54:46.067Z",
+  "generatedAt": "2026-09-24T08:58:18.060Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -167,10 +167,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 19,
-      "closedIssues": 24,
+      "openIssues": 18,
+      "closedIssues": 25,
       "openPRs": 0,
-      "closedRatio": 56,
+      "closedRatio": 58,
       "latestRelease": {
         "tagName": "v0.4.0",
         "name": "v0.4.0 — Gestão de atletas",

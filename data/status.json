@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T08:58:18.060Z",
+  "generatedAt": "2026-09-24T14:07:02.794Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 4,
-      "closedIssues": 93,
+      "openIssues": 10,
+      "closedIssues": 91,
       "openPRs": 1,
-      "closedRatio": 96,
+      "closedRatio": 90,
       "latestRelease": {
         "tagName": "v0.10.0",
         "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",
@@ -107,78 +107,98 @@
       ],
       "inProgress": [
         {
-          "number": 98,
-          "title": "[TRAINING-PLAN] Status do plano + listagem por atleta",
+          "number": 46,
+          "title": "[ACTIVITY] Registro de atividade realizada",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/98"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/46"
         },
         {
-          "number": 31,
-          "title": "[TRAINING-PLAN] Planos de treinamento",
+          "number": 102,
+          "title": "[ACTIVITY] athleteId + CoachAccessGuard em metrics/history/compare",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/31"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/102"
         },
         {
-          "number": 25,
-          "title": "[COACH] Treinador e assessoria",
+          "number": 101,
+          "title": "[WORKOUT] athleteId opcional em GET /workouts (modo todos os atletas)",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/25"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/101"
         },
         {
-          "number": 97,
-          "title": "[COACH] Perfil de um atleta específico visto pelo treinador",
+          "number": 36,
+          "title": "[WORKOUT] Treino individual",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/97"
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/36"
+        },
+        {
+          "number": 100,
+          "title": "[WORKOUT] Indicador de atividade já registrada (hasActivity)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/100"
         }
       ],
       "recentlyCreated": [
         {
+          "number": 102,
+          "title": "[ACTIVITY] athleteId + CoachAccessGuard em metrics/history/compare",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/102"
+        },
+        {
+          "number": 101,
+          "title": "[WORKOUT] athleteId opcional em GET /workouts (modo todos os atletas)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/101"
+        },
+        {
+          "number": 100,
+          "title": "[WORKOUT] Indicador de atividade já registrada (hasActivity)",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/100"
+        },
+        {
+          "number": 99,
+          "title": "[WORKOUT] Reagendar treino (PATCH /workouts/{id})",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/99"
+        },
+        {
           "number": 98,
           "title": "[TRAINING-PLAN] Status do plano + listagem por atleta",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/98"
-        },
-        {
-          "number": 97,
-          "title": "[COACH] Perfil de um atleta específico visto pelo treinador",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/97"
-        },
-        {
-          "number": 96,
-          "title": "[Segurança] Redis sem autenticação em produção",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/96"
-        },
-        {
-          "number": 95,
-          "title": "[Segurança] JWT secret fraco ativado por padrão em ambiente dev",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/95"
-        },
-        {
-          "number": 94,
-          "title": "[Segurança] IDOR em endpoints de coach (team ownership não verificado)",
-          "state": "CLOSED",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/94"
         }
       ]
     },
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 18,
-      "closedIssues": 25,
+      "openIssues": 11,
+      "closedIssues": 32,
       "openPRs": 0,
-      "closedRatio": 58,
+      "closedRatio": 74,
       "latestRelease": {
-        "tagName": "v0.4.0",
-        "name": "v0.4.0 — Gestão de atletas",
-        "description": "## Checkpoint: fim do módulo `[ATHLETES] Gestão de atletas` (#18)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Listagem de atletas** (#19): busca client-side por e-mail, badge de perfil incompleto.\n- **Cadastro/convite de atleta** (#20): convite por `athleteId`, mensagem específica pra convite duplicado (409).\n- **Tela de perfil do atleta** (#21): dados físicos e nível de experiência de um atleta específico.\n- **Histórico do atleta** (#22): linha do tempo de atividades paginada (server-side), integrada como seção da tela de perfil.\n\n### Limitações conhecidas\n\n- `teamId` fixo como placeholder em várias telas — falta um endpoint \"meu time principal\" no backend pro frontend descobrir o time do treinador logado.\n- `GET /coach/athletes/{athleteId}` não existe no backend ainda ([Pite-Backend#97](https://github.com/kevinDsousa/Pite-Backend/issues/97)) — a tela de perfil roda a chamada mas não retorna dado real até essa issue ser implementada.\n",
-        "publishedAt": "2026-09-24T00:07:23Z",
-        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.4.0"
+        "tagName": "v0.6.0",
+        "name": "v0.6.0 — Calendário",
+        "description": "## Checkpoint: fim do módulo `[CALENDAR] Calendário` (#28)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Visualização mensal/semanal** (#29): grid customizado, navegação anterior/próximo/hoje, treinos agrupados por dia (sessões combinadas naturalmente lado a lado).\n- **Drag-and-drop entre dias** (#30): Angular CDK, atualização otimista com rollback em caso de falha.\n- **Filtro por atleta/tipo de treino** (#31): client-side, persistido via query params na URL.\n\n### Limitações conhecidas\n\n- `PATCH /workouts/{id}` não existe no backend ([Pite-Backend#99](https://github.com/kevinDsousa/Pite-Backend/issues/99)) — o drag-and-drop reverte visualmente até esse endpoint existir.\n- Sem indicador `hasActivity` ([Pite-Backend#100](https://github.com/kevinDsousa/Pite-Backend/issues/100)) — nenhum treino é bloqueado pra arrastar, mesmo já executado.\n- `athleteId` obrigatório em `GET /workouts` e ausente em `WorkoutSummaryResponse` ([Pite-Backend#101](https://github.com/kevinDsousa/Pite-Backend/issues/101)) — o filtro por atleta é funcionalmente inerte até existir o modo \"todos os atletas vinculados\".\n",
+        "publishedAt": "2026-09-24T12:51:43Z",
+        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.6.0"
       },
       "releases": [
+        {
+          "tagName": "v0.6.0",
+          "name": "v0.6.0 — Calendário",
+          "description": "## Checkpoint: fim do módulo `[CALENDAR] Calendário` (#28)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Visualização mensal/semanal** (#29): grid customizado, navegação anterior/próximo/hoje, treinos agrupados por dia (sessões combinadas naturalmente lado a lado).\n- **Drag-and-drop entre dias** (#30): Angular CDK, atualização otimista com rollback em caso de falha.\n- **Filtro por atleta/tipo de treino** (#31): client-side, persistido via query params na URL.\n\n### Limitações conhecidas\n\n- `PATCH /workouts/{id}` não existe no backend ([Pite-Backend#99](https://github.com/kevinDsousa/Pite-Backend/issues/99)) — o drag-and-drop reverte visualmente até esse endpoint existir.\n- Sem indicador `hasActivity` ([Pite-Backend#100](https://github.com/kevinDsousa/Pite-Backend/issues/100)) — nenhum treino é bloqueado pra arrastar, mesmo já executado.\n- `athleteId` obrigatório em `GET /workouts` e ausente em `WorkoutSummaryResponse` ([Pite-Backend#101](https://github.com/kevinDsousa/Pite-Backend/issues/101)) — o filtro por atleta é funcionalmente inerte até existir o modo \"todos os atletas vinculados\".\n",
+          "publishedAt": "2026-09-24T12:51:43Z",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.6.0"
+        },
+        {
+          "tagName": "v0.5.0",
+          "name": "v0.5.0 — Gestão de treinos",
+          "description": "## Checkpoint: fim do módulo `[WORKOUTS] Gestão de treinos` (#23)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Listagem de planos de treino** (#24): filtro client-side por status (padrão ACTIVE).\n- **Wizard de criação de plano** (#25): 3 passos — dados gerais, duração, confirmação com semanas geradas.\n- **Editor de treino reutilizável** (#26): steps reordenáveis, suporte a sessão combinada (múltiplos treinos no mesmo dia), componente \"burro\" via outputs.\n- **Templates de plano** (#27): salvar/listar/duplicar templates pra outro atleta, com aviso de que o template não traz os treinos.\n\n### Limitações conhecidas\n\n- `TrainingPlan` não tem campo de status no backend ainda, e não existe `GET /training-plans?athleteId=` ([Pite-Backend#98](https://github.com/kevinDsousa/Pite-Backend/issues/98)) — a listagem roda mas não retorna dado real até essa issue ser implementada.\n- Wizard só cria planos — modo de edição de plano existente não está coberto.\n- `athleteId`/`teamId` fixos como placeholder em várias telas (pendência recorrente desde o dashboard).\n",
+          "publishedAt": "2026-09-24T11:17:36Z",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.5.0"
+        },
         {
           "tagName": "v0.4.0",
           "name": "v0.4.0 — Gestão de atletas",
@@ -199,21 +219,14 @@
           "description": "## Checkpoint: fim do módulo `[AUTH] Login e cadastro` (#9)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Tela de login** (#10): Reactive Forms, validação client-side, mensagem genérica de erro (nunca diferencia e-mail inexistente de senha errada).\n- **Tela de cadastro de treinador** (#11): só `role=COACH`, confirmação de senha, mensagem específica pra e-mail duplicado (409).\n- **Fluxo de recuperação de senha** (#12): \"esqueci minha senha\" (sempre mostra sucesso, exista ou não o e-mail) + redefinição via token de query param.\n- **Gerenciamento de sessão** (#13): `AuthService` com signal `currentUser`, consumido pelos guards e interceptors do épico [INFRA].\n\n### Limitações conhecidas\n\n- `AuthService.login` fixa `role: 'COACH'` no `CurrentUser` — o backend ainda não devolve o role na resposta de `/auth/login`.\n",
           "publishedAt": "2026-09-23T23:26:39Z",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.2.0"
-        },
-        {
-          "tagName": "v0.1.0",
-          "name": "v0.1.0 — Fundação do projeto Angular",
-          "description": "## Checkpoint: fim do módulo `[INFRA] Fundação do projeto Angular` (#1)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API — marca apenas que o módulo de fundação (issues #2 a #8) está concluído. Nenhuma tela real de negócio existe ainda (login, dashboard, atletas, etc.) além do necessário pra validar a infraestrutura.\n\n### O que entra nessa versão\n\n- **Setup Angular CLI + estrutura por feature**: standalone components, `src/app/core` (transversal) e `src/app/shared` (UI reutilizável) (#2).\n- **Environments + proxy de API**: `environment.ts`/`environment.prod.ts` via `fileReplacements`, proxy de dev pra `/api/*` evitando CORS (#3).\n- **Design system base**: tema via CSS custom properties, componentes `Button`/`InputField`/`Card` signal-based em `shared/ui` (#4).\n- **HTTP client + interceptors**: `authInterceptor` injeta `Authorization: Bearer`, `errorInterceptor` normaliza erros no formato `ApiError` e faz logout automático em 401 (#5).\n- **Roteamento + lazy loading por módulo**: rota raiz com `loadChildren` por feature, cada módulo isolado em seu próprio chunk (#6).\n- **Guards de autenticação/role**: `authGuard` e `roleGuard` (fábrica) protegendo todas as rotas exceto `/login` (#7).\n- **Pipeline CI/CD**: lint + testes (headless, Vitest) + build de produção como gates obrigatórios em todo push/PR pra `main` (#8).\n\n### Limitações conhecidas\n\n- **Nenhuma feature de negócio implementada** — as rotas de cada módulo (`dashboard`, `athletes`, `workouts`, `calendar`, `analytics`, `ai-insights`, `settings`) apontam pra componentes placeholder até as respectivas issues de feature serem feitas.\n- **Runner de testes é Vitest, não Karma** — algumas issues do backlog foram desenhadas assumindo Karma/Jasmine (`ChromeHeadless`, `jasmine.createSpyObj`, `toBeTrue()`); adaptado pra Vitest em cada issue implementada, com o desvio documentado no commit/comentário de fechamento correspondente.\n- **`AuthService.login` fixa `role: 'COACH'`** no `CurrentUser`, porque a resposta de `/auth/login` do backend ainda não devolve o role do usuário — ajuste natural quando esse dado existir.\n\n### Como rodar\n\n```\nnpm ci\nnpm start\n```\n\nBackend precisa estar rodando em `http://localhost:8080` (proxy configurado em `proxy.conf.json`).\n",
-          "publishedAt": "2026-09-23T16:43:47Z",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.1.0"
         }
       ],
       "inProgress": [
         {
-          "number": 23,
-          "title": "[WORKOUTS] Gestão de treinos",
+          "number": 32,
+          "title": "[ANALYTICS] Análises e evolução",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/23"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/32"
         },
         {
           "number": 43,

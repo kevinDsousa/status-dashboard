@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T22:19:46.323Z",
+  "generatedAt": "2026-09-26T00:45:05.116Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -107,6 +107,12 @@
       ],
       "inProgress": [
         {
+          "number": 97,
+          "title": "[COACH] Perfil de um atleta específico visto pelo treinador",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/97"
+        },
+        {
           "number": 46,
           "title": "[ACTIVITY] Registro de atividade realizada",
           "state": "OPEN",
@@ -129,12 +135,6 @@
           "title": "[WORKOUT] Treino individual",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/36"
-        },
-        {
-          "number": 100,
-          "title": "[WORKOUT] Indicador de atividade já registrada (hasActivity)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/100"
         }
       ],
       "recentlyCreated": [

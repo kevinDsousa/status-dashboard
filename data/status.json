@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T00:45:05.116Z",
+  "generatedAt": "2026-09-26T05:34:16.235Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 10,
-      "closedIssues": 91,
+      "openIssues": 4,
+      "closedIssues": 97,
       "openPRs": 1,
-      "closedRatio": 90,
+      "closedRatio": 96,
       "latestRelease": {
         "tagName": "v0.10.0",
         "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",
@@ -107,65 +107,59 @@
       ],
       "inProgress": [
         {
-          "number": 97,
-          "title": "[COACH] Perfil de um atleta específico visto pelo treinador",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/97"
-        },
-        {
           "number": 46,
           "title": "[ACTIVITY] Registro de atividade realizada",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/46"
         },
         {
-          "number": 102,
-          "title": "[ACTIVITY] athleteId + CoachAccessGuard em metrics/history/compare",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/102"
-        },
-        {
-          "number": 101,
-          "title": "[WORKOUT] athleteId opcional em GET /workouts (modo todos os atletas)",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/101"
-        },
-        {
           "number": 36,
           "title": "[WORKOUT] Treino individual",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/36"
+        },
+        {
+          "number": 31,
+          "title": "[TRAINING-PLAN] Planos de treinamento",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/31"
+        },
+        {
+          "number": 25,
+          "title": "[COACH] Treinador e assessoria",
+          "state": "OPEN",
+          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/25"
         }
       ],
       "recentlyCreated": [
         {
           "number": 102,
           "title": "[ACTIVITY] athleteId + CoachAccessGuard em metrics/history/compare",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/102"
         },
         {
           "number": 101,
           "title": "[WORKOUT] athleteId opcional em GET /workouts (modo todos os atletas)",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/101"
         },
         {
           "number": 100,
           "title": "[WORKOUT] Indicador de atividade já registrada (hasActivity)",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/100"
         },
         {
           "number": 99,
           "title": "[WORKOUT] Reagendar treino (PATCH /workouts/{id})",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/99"
         },
         {
           "number": 98,
           "title": "[TRAINING-PLAN] Status do plano + listagem por atleta",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/98"
         }
       ]
@@ -173,10 +167,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 11,
-      "closedIssues": 32,
+      "openIssues": 9,
+      "closedIssues": 34,
       "openPRs": 0,
-      "closedRatio": 74,
+      "closedRatio": 79,
       "latestRelease": {
         "tagName": "v0.6.0",
         "name": "v0.6.0 — Calendário",

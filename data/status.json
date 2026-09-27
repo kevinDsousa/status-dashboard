@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T20:48:32.758Z",
+  "generatedAt": "2026-09-27T23:36:17.505Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -161,18 +161,25 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 7,
-      "closedIssues": 36,
+      "openIssues": 3,
+      "closedIssues": 40,
       "openPRs": 0,
-      "closedRatio": 84,
+      "closedRatio": 93,
       "latestRelease": {
-        "tagName": "v0.7.0",
-        "name": "v0.7.0 — Análises e evolução",
-        "description": "## Checkpoint: fim do módulo `[ANALYTICS] Análises e evolução` (#32)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Gráficos de volume ao longo do tempo** (#33): ngx-charts (biblioteca de gráficos padrão do frontend), janela de 4/8/12 semanas, estado vazio.\n- **Comparação planejado vs realizado** (#34): `PlannedVsActualCardComponent` compartilhado em `shared/`, 404 do backend tratado como \"treino ainda não realizado\", destaque de desvio de carga ≥ 3.\n- **Exportação de relatório** (#35): seletor de atleta vinculado na tela de analytics (gráficos e exportação passam a ser por atleta), geração com loading sem duplo clique e histórico persistente de relatórios.\n- **Correção**: histórico de atividades do atleta chamava `/activities/history` em vez de `/activities`.\n\n### Dependências de backend (já entregues)\n\n- `athleteId` + `CoachAccessGuard` em metrics/history/compare ([Pite-Backend#102](https://github.com/kevinDsousa/Pite-Backend/issues/102)).\n- `athleteId` em `POST /reports`, `GET /reports?athleteId=` e `GET /coach/athletes` (Pite-Backend `ac3c8ea`).\n\n### Limitações conhecidas\n\n- CSV do relatório ainda é placeholder (só período), sem as métricas reais.\n- `GET /reports/{id}` segue restrito ao próprio atleta — o front usa as URLs da listagem.\n- Gráfico faz uma chamada a `/activities/metrics` por semana da janela (não há endpoint de série temporal).\n",
-        "publishedAt": "2026-09-27T10:43:46Z",
-        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.7.0"
+        "tagName": "v0.8.0",
+        "name": "v0.8.0 — Sugestões de IA",
+        "description": "## Checkpoint: fim do módulo `[AI-INSIGHTS] Painel de sugestões de IA` (#36)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Listagem de sugestões pendentes** (#37): tela `/ai-insights` com sugestões de todos os atletas vinculados, justificativa sempre visível, destaque por severidade e e-mail do atleta em cada card; estados de carregando/erro/vazio distintos.\n- **Aprovação/rejeição** (#38): confirmação só na rejeição, aviso de que aprovar não altera o plano automaticamente, remoção otimista com rollback; sugestão já decidida em outra aba (400) não volta à lista.\n- **Histórico de decisões** (#39): aba \"Histórico\" persistente, com filtros por atleta e decisão; card compartilhado (`SuggestionCardComponent`) entre pendentes e histórico.\n- **Deploy**: `Dockerfile` (nginx) e publicação da imagem no GHCR após o CI, prontos para o Dokploy (`PITE_API_BASE_URL` em build-time, `CSP_CONNECT_SRC` em runtime).\n\n### Dependências de backend (já entregues)\n\n- `GET /coach/ai-suggestions/history?athleteId=&status=` (Pite-Backend `c5f1879`).\n- Checagem de vínculo antes do status em `PATCH /coach/ai-suggestions/{id}/decide` (Pite-Backend `eaba0ee`).\n\n### Limitações conhecidas\n\n- \"Analisar agora\" (disparo sob demanda) não existe: `generateForAthlete` não tem endpoint no backend.\n- Justificativa da decisão sempre enviada como `null` (sem campo de texto na UI ainda).\n",
+        "publishedAt": "2026-09-27T21:03:03Z",
+        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.8.0"
       },
       "releases": [
+        {
+          "tagName": "v0.8.0",
+          "name": "v0.8.0 — Sugestões de IA",
+          "description": "## Checkpoint: fim do módulo `[AI-INSIGHTS] Painel de sugestões de IA` (#36)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Listagem de sugestões pendentes** (#37): tela `/ai-insights` com sugestões de todos os atletas vinculados, justificativa sempre visível, destaque por severidade e e-mail do atleta em cada card; estados de carregando/erro/vazio distintos.\n- **Aprovação/rejeição** (#38): confirmação só na rejeição, aviso de que aprovar não altera o plano automaticamente, remoção otimista com rollback; sugestão já decidida em outra aba (400) não volta à lista.\n- **Histórico de decisões** (#39): aba \"Histórico\" persistente, com filtros por atleta e decisão; card compartilhado (`SuggestionCardComponent`) entre pendentes e histórico.\n- **Deploy**: `Dockerfile` (nginx) e publicação da imagem no GHCR após o CI, prontos para o Dokploy (`PITE_API_BASE_URL` em build-time, `CSP_CONNECT_SRC` em runtime).\n\n### Dependências de backend (já entregues)\n\n- `GET /coach/ai-suggestions/history?athleteId=&status=` (Pite-Backend `c5f1879`).\n- Checagem de vínculo antes do status em `PATCH /coach/ai-suggestions/{id}/decide` (Pite-Backend `eaba0ee`).\n\n### Limitações conhecidas\n\n- \"Analisar agora\" (disparo sob demanda) não existe: `generateForAthlete` não tem endpoint no backend.\n- Justificativa da decisão sempre enviada como `null` (sem campo de texto na UI ainda).\n",
+          "publishedAt": "2026-09-27T21:03:03Z",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.8.0"
+        },
         {
           "tagName": "v0.7.0",
           "name": "v0.7.0 — Análises e evolução",
@@ -200,21 +207,14 @@
           "description": "## Checkpoint: fim do módulo `[ATHLETES] Gestão de atletas` (#18)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Listagem de atletas** (#19): busca client-side por e-mail, badge de perfil incompleto.\n- **Cadastro/convite de atleta** (#20): convite por `athleteId`, mensagem específica pra convite duplicado (409).\n- **Tela de perfil do atleta** (#21): dados físicos e nível de experiência de um atleta específico.\n- **Histórico do atleta** (#22): linha do tempo de atividades paginada (server-side), integrada como seção da tela de perfil.\n\n### Limitações conhecidas\n\n- `teamId` fixo como placeholder em várias telas — falta um endpoint \"meu time principal\" no backend pro frontend descobrir o time do treinador logado.\n- `GET /coach/athletes/{athleteId}` não existe no backend ainda ([Pite-Backend#97](https://github.com/kevinDsousa/Pite-Backend/issues/97)) — a tela de perfil roda a chamada mas não retorna dado real até essa issue ser implementada.\n",
           "publishedAt": "2026-09-24T00:07:23Z",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.4.0"
-        },
-        {
-          "tagName": "v0.3.0",
-          "name": "v0.3.0 — Dashboard do treinador",
-          "description": "## Checkpoint: fim do módulo `[DASHBOARD] Dashboard do treinador` (#14)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Layout do dashboard e cards de resumo** (#15): grid CSS com cards envolvendo widgets independentes.\n- **Widget de atletas ativos/alertas de IA** (#16): contagem de atletas vinculados + sugestões de IA pendentes, `DashboardService.getSummary` compondo duas chamadas.\n- **Widget de treinos do dia/semana** (#17): lista os treinos planejados da semana atual, com estado vazio.\n\n### Limitações conhecidas\n\n- `GET /coach/teams/me/athletes` é placeholder — falta um jeito do frontend descobrir o `teamId` do treinador logado no backend.\n- Não existe endpoint agregado de treinos por vários atletas — o widget de treinos usa um `athleteId` fixo de placeholder até essa decisão de arquitetura (agregação no cliente vs. endpoint novo no backend) ser tomada.\n",
-          "publishedAt": "2026-09-23T23:26:50Z",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.3.0"
         }
       ],
       "inProgress": [
         {
-          "number": 36,
-          "title": "[AI-INSIGHTS] Painel de sugestões de IA",
+          "number": 40,
+          "title": "[SETTINGS] Configurações",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/36"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/40"
         },
         {
           "number": 43,
@@ -227,18 +227,6 @@
           "title": "[SETTINGS] Integrações conectadas",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/42"
-        },
-        {
-          "number": 41,
-          "title": "[SETTINGS] Perfil do treinador/assessoria",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
-        },
-        {
-          "number": 39,
-          "title": "[AI-INSIGHTS] Histórico de decisões",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
         }
       ],
       "recentlyCreated": [
@@ -257,7 +245,7 @@
         {
           "number": 41,
           "title": "[SETTINGS] Perfil do treinador/assessoria",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/41"
         },
         {
@@ -269,7 +257,7 @@
         {
           "number": 39,
           "title": "[AI-INSIGHTS] Histórico de decisões",
-          "state": "OPEN",
+          "state": "CLOSED",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/39"
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T07:32:32.623Z",
+  "generatedAt": "2026-09-27T13:18:30.600Z",
   "repos": [
     {
       "owner": "kevinDsousa",
@@ -78,10 +78,10 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Backend",
-      "openIssues": 4,
-      "closedIssues": 97,
+      "openIssues": 3,
+      "closedIssues": 98,
       "openPRs": 1,
-      "closedRatio": 96,
+      "closedRatio": 97,
       "latestRelease": {
         "tagName": "v0.10.0",
         "name": "v0.10.0 — AI Engine, Integrações Externas e Segurança",
@@ -123,12 +123,6 @@
           "title": "[TRAINING-PLAN] Planos de treinamento",
           "state": "OPEN",
           "url": "https://github.com/kevinDsousa/Pite-Backend/issues/31"
-        },
-        {
-          "number": 25,
-          "title": "[COACH] Treinador e assessoria",
-          "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Backend/issues/25"
         }
       ],
       "recentlyCreated": [
@@ -167,18 +161,25 @@
     {
       "owner": "kevinDsousa",
       "name": "Pite-Frontend",
-      "openIssues": 9,
-      "closedIssues": 34,
+      "openIssues": 7,
+      "closedIssues": 36,
       "openPRs": 0,
-      "closedRatio": 79,
+      "closedRatio": 84,
       "latestRelease": {
-        "tagName": "v0.6.0",
-        "name": "v0.6.0 — Calendário",
-        "description": "## Checkpoint: fim do módulo `[CALENDAR] Calendário` (#28)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Visualização mensal/semanal** (#29): grid customizado, navegação anterior/próximo/hoje, treinos agrupados por dia (sessões combinadas naturalmente lado a lado).\n- **Drag-and-drop entre dias** (#30): Angular CDK, atualização otimista com rollback em caso de falha.\n- **Filtro por atleta/tipo de treino** (#31): client-side, persistido via query params na URL.\n\n### Limitações conhecidas\n\n- `PATCH /workouts/{id}` não existe no backend ([Pite-Backend#99](https://github.com/kevinDsousa/Pite-Backend/issues/99)) — o drag-and-drop reverte visualmente até esse endpoint existir.\n- Sem indicador `hasActivity` ([Pite-Backend#100](https://github.com/kevinDsousa/Pite-Backend/issues/100)) — nenhum treino é bloqueado pra arrastar, mesmo já executado.\n- `athleteId` obrigatório em `GET /workouts` e ausente em `WorkoutSummaryResponse` ([Pite-Backend#101](https://github.com/kevinDsousa/Pite-Backend/issues/101)) — o filtro por atleta é funcionalmente inerte até existir o modo \"todos os atletas vinculados\".\n",
-        "publishedAt": "2026-09-24T12:51:43Z",
-        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.6.0"
+        "tagName": "v0.7.0",
+        "name": "v0.7.0 — Análises e evolução",
+        "description": "## Checkpoint: fim do módulo `[ANALYTICS] Análises e evolução` (#32)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Gráficos de volume ao longo do tempo** (#33): ngx-charts (biblioteca de gráficos padrão do frontend), janela de 4/8/12 semanas, estado vazio.\n- **Comparação planejado vs realizado** (#34): `PlannedVsActualCardComponent` compartilhado em `shared/`, 404 do backend tratado como \"treino ainda não realizado\", destaque de desvio de carga ≥ 3.\n- **Exportação de relatório** (#35): seletor de atleta vinculado na tela de analytics (gráficos e exportação passam a ser por atleta), geração com loading sem duplo clique e histórico persistente de relatórios.\n- **Correção**: histórico de atividades do atleta chamava `/activities/history` em vez de `/activities`.\n\n### Dependências de backend (já entregues)\n\n- `athleteId` + `CoachAccessGuard` em metrics/history/compare ([Pite-Backend#102](https://github.com/kevinDsousa/Pite-Backend/issues/102)).\n- `athleteId` em `POST /reports`, `GET /reports?athleteId=` e `GET /coach/athletes` (Pite-Backend `ac3c8ea`).\n\n### Limitações conhecidas\n\n- CSV do relatório ainda é placeholder (só período), sem as métricas reais.\n- `GET /reports/{id}` segue restrito ao próprio atleta — o front usa as URLs da listagem.\n- Gráfico faz uma chamada a `/activities/metrics` por semana da janela (não há endpoint de série temporal).\n",
+        "publishedAt": "2026-09-27T10:43:46Z",
+        "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.7.0"
       },
       "releases": [
+        {
+          "tagName": "v0.7.0",
+          "name": "v0.7.0 — Análises e evolução",
+          "description": "## Checkpoint: fim do módulo `[ANALYTICS] Análises e evolução` (#32)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Gráficos de volume ao longo do tempo** (#33): ngx-charts (biblioteca de gráficos padrão do frontend), janela de 4/8/12 semanas, estado vazio.\n- **Comparação planejado vs realizado** (#34): `PlannedVsActualCardComponent` compartilhado em `shared/`, 404 do backend tratado como \"treino ainda não realizado\", destaque de desvio de carga ≥ 3.\n- **Exportação de relatório** (#35): seletor de atleta vinculado na tela de analytics (gráficos e exportação passam a ser por atleta), geração com loading sem duplo clique e histórico persistente de relatórios.\n- **Correção**: histórico de atividades do atleta chamava `/activities/history` em vez de `/activities`.\n\n### Dependências de backend (já entregues)\n\n- `athleteId` + `CoachAccessGuard` em metrics/history/compare ([Pite-Backend#102](https://github.com/kevinDsousa/Pite-Backend/issues/102)).\n- `athleteId` em `POST /reports`, `GET /reports?athleteId=` e `GET /coach/athletes` (Pite-Backend `ac3c8ea`).\n\n### Limitações conhecidas\n\n- CSV do relatório ainda é placeholder (só período), sem as métricas reais.\n- `GET /reports/{id}` segue restrito ao próprio atleta — o front usa as URLs da listagem.\n- Gráfico faz uma chamada a `/activities/metrics` por semana da janela (não há endpoint de série temporal).\n",
+          "publishedAt": "2026-09-27T10:43:46Z",
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.7.0"
+        },
         {
           "tagName": "v0.6.0",
           "name": "v0.6.0 — Calendário",
@@ -206,21 +207,14 @@
           "description": "## Checkpoint: fim do módulo `[DASHBOARD] Dashboard do treinador` (#14)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Layout do dashboard e cards de resumo** (#15): grid CSS com cards envolvendo widgets independentes.\n- **Widget de atletas ativos/alertas de IA** (#16): contagem de atletas vinculados + sugestões de IA pendentes, `DashboardService.getSummary` compondo duas chamadas.\n- **Widget de treinos do dia/semana** (#17): lista os treinos planejados da semana atual, com estado vazio.\n\n### Limitações conhecidas\n\n- `GET /coach/teams/me/athletes` é placeholder — falta um jeito do frontend descobrir o `teamId` do treinador logado no backend.\n- Não existe endpoint agregado de treinos por vários atletas — o widget de treinos usa um `athleteId` fixo de placeholder até essa decisão de arquitetura (agregação no cliente vs. endpoint novo no backend) ser tomada.\n",
           "publishedAt": "2026-09-23T23:26:50Z",
           "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.3.0"
-        },
-        {
-          "tagName": "v0.2.0",
-          "name": "v0.2.0 — Login e cadastro",
-          "description": "## Checkpoint: fim do módulo `[AUTH] Login e cadastro` (#9)\n\nVersão **pré-1.0**, sem garantia de estabilidade de API.\n\n### O que entra nessa versão\n\n- **Tela de login** (#10): Reactive Forms, validação client-side, mensagem genérica de erro (nunca diferencia e-mail inexistente de senha errada).\n- **Tela de cadastro de treinador** (#11): só `role=COACH`, confirmação de senha, mensagem específica pra e-mail duplicado (409).\n- **Fluxo de recuperação de senha** (#12): \"esqueci minha senha\" (sempre mostra sucesso, exista ou não o e-mail) + redefinição via token de query param.\n- **Gerenciamento de sessão** (#13): `AuthService` com signal `currentUser`, consumido pelos guards e interceptors do épico [INFRA].\n\n### Limitações conhecidas\n\n- `AuthService.login` fixa `role: 'COACH'` no `CurrentUser` — o backend ainda não devolve o role na resposta de `/auth/login`.\n",
-          "publishedAt": "2026-09-23T23:26:39Z",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/releases/tag/v0.2.0"
         }
       ],
       "inProgress": [
         {
-          "number": 32,
-          "title": "[ANALYTICS] Análises e evolução",
+          "number": 36,
+          "title": "[AI-INSIGHTS] Painel de sugestões de IA",
           "state": "OPEN",
-          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/32"
+          "url": "https://github.com/kevinDsousa/Pite-Frontend/issues/36"
         },
         {
           "number": 43,
